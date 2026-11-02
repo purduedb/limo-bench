@@ -1,0 +1,2900 @@
+[
+  {
+    "task_id": "WL-DIR-000",
+    "operation": "directionality",
+    "prompt": "Relative to Boilermaker Station Welcome Center in West Lafayette, IN, in which direction is West Lafayette Junior-Senior High School?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "direction": "N",
+      "bearing_deg": 0.63,
+      "distance_km": 1.261,
+      "location_a": {
+        "osm_id": 283537867,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "West Lafayette Junior-Senior High School",
+        "address": "1105 North Grant Street, West Lafayette, IN 47906",
+        "lat": 40.4360884,
+        "lon": -86.91186312694524
+      },
+      "location_b": {
+        "osm_id": 11515586281,
+        "source_table": "osm.planet_osm_point",
+        "name": "Boilermaker Station Welcome Center",
+        "address": "128 Memorial Mall Drive, West Lafayette, IN 47907",
+        "lat": 40.4247514,
+        "lon": -86.9120263
+      }
+    }
+  },
+  {
+    "task_id": "WL-DIR-001",
+    "operation": "directionality",
+    "prompt": "Which compass direction is Emergent Solar Energy from Northview Church Greater Lafayette Campus in West Lafayette, IN?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "direction": "NE",
+      "bearing_deg": 46.16,
+      "distance_km": 3.142,
+      "location_a": {
+        "osm_id": 6049010023,
+        "source_table": "osm.planet_osm_point",
+        "name": "Emergent Solar Energy",
+        "address": "1281 Win Hentschel Boulevard, West Lafayette, IN 47906",
+        "lat": 40.4647677,
+        "lon": -86.928148
+      },
+      "location_b": {
+        "osm_id": 588794337,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Northview Church Greater Lafayette Campus",
+        "address": "2703 Lindberg Road, West Lafayette, IN 47906",
+        "lat": 40.44519975,
+        "lon": -86.95493663678074
+      }
+    }
+  },
+  {
+    "task_id": "WL-DIR-002",
+    "operation": "directionality",
+    "prompt": "Standing at Extraspace Storage in West Lafayette, IN, in what compass direction is Serenity Hospice?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "direction": "E",
+      "bearing_deg": 93.1,
+      "distance_km": 2.999,
+      "location_a": {
+        "osm_id": 8001561665,
+        "source_table": "osm.planet_osm_point",
+        "name": "Serenity Hospice",
+        "address": "724 West Navajo Street, West Lafayette, IN 47906",
+        "lat": 40.452361,
+        "lon": -86.9181265
+      },
+      "location_b": {
+        "osm_id": 861237941,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Extraspace Storage",
+        "address": "2575 Cumberland Avenue, West Lafayette, IN 47906",
+        "lat": 40.45382725,
+        "lon": -86.95352031043197
+      }
+    }
+  },
+  {
+    "task_id": "WL-DIR-003",
+    "operation": "directionality",
+    "prompt": "On a compass, in which direction is West Lafayette Community School Corporation from Prestige Inn in West Lafayette, IN?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "direction": "SE",
+      "bearing_deg": 135.61,
+      "distance_km": 2.46,
+      "location_a": {
+        "osm_id": 886048180,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "West Lafayette Community School Corporation",
+        "address": "1130 North Salisbury Street, West Lafayette, IN 47906",
+        "lat": 40.437115649999996,
+        "lon": -86.90549125
+      },
+      "location_b": {
+        "osm_id": 692636024,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Prestige Inn",
+        "address": "1217 Sagamore Parkway West, West Lafayette, IN 47906",
+        "lat": 40.45292515,
+        "lon": -86.9258257980612
+      }
+    }
+  },
+  {
+    "task_id": "WL-DIR-004",
+    "operation": "directionality",
+    "prompt": "In which direction does Shealy (Frances M.) Residence Hall lie as seen from Beau Jardin Apartments in West Lafayette, IN?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "direction": "S",
+      "bearing_deg": 177.93,
+      "distance_km": 3.177,
+      "location_a": {
+        "osm_id": 128488695,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Shealy (Frances M.) Residence Hall",
+        "address": "207 North Russell Street, West Lafayette, IN 47906",
+        "lat": 40.42603235,
+        "lon": -86.92091952177225
+      },
+      "location_b": {
+        "osm_id": 451721321,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Beau Jardin Apartments",
+        "address": "2550 Yeager Road, West Lafayette, IN 47906",
+        "lat": 40.4545827,
+        "lon": -86.92227334469621
+      }
+    }
+  },
+  {
+    "task_id": "WL-DIR-005",
+    "operation": "directionality",
+    "prompt": "Tell me the direction of Purdue University Daniel Turf Center relative to West Lafayette Observatory in West Lafayette, IN.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "direction": "SW",
+      "bearing_deg": 223.16,
+      "distance_km": 2.943,
+      "location_a": {
+        "osm_id": 383449897,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Purdue University Daniel Turf Center",
+        "address": "1340 Cherry Lane, West Lafayette, IN 47907",
+        "lat": 40.441977249999994,
+        "lon": -86.93005504999999
+      },
+      "location_b": {
+        "osm_id": 472851193,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "West Lafayette Observatory",
+        "address": "600 Cumberland Avenue, West Lafayette, IN 47906",
+        "lat": 40.46128685,
+        "lon": -86.90626415
+      }
+    }
+  },
+  {
+    "task_id": "WL-DIR-006",
+    "operation": "directionality",
+    "prompt": "From Taste of India, what direction would I face to look at Purdue Technology and Aerospace in West Lafayette, IN?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "direction": "W",
+      "bearing_deg": 273.63,
+      "distance_km": 2.976,
+      "location_a": {
+        "osm_id": 676161130,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Purdue Technology and Aerospace",
+        "address": "1801 Newman Road, West Lafayette, IN 47906",
+        "lat": 40.423474350000006,
+        "lon": -86.93991302580986
+      },
+      "location_b": {
+        "osm_id": 10816583716,
+        "source_table": "osm.planet_osm_point",
+        "name": "Taste of India",
+        "address": "111 South River Road, West Lafayette, IN 47906",
+        "lat": 40.4217875,
+        "lon": -86.9048298
+      }
+    }
+  },
+  {
+    "task_id": "WL-DIR-007",
+    "operation": "directionality",
+    "prompt": "Seen from Vienna Coffee House & Bakery in West Lafayette, IN, which direction is Crosswalk Commons?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "direction": "NW",
+      "bearing_deg": 311.01,
+      "distance_km": 1.786,
+      "location_a": {
+        "osm_id": 231217849,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Crosswalk Commons",
+        "address": "925 Hilltop Drive, West Lafayette, IN 47906",
+        "lat": 40.43461225,
+        "lon": -86.9234896847881
+      },
+      "location_b": {
+        "osm_id": 3200412761,
+        "source_table": "osm.planet_osm_point",
+        "name": "Vienna Coffee House & Bakery",
+        "address": "208 South Street, West Lafayette, IN 47906",
+        "lat": 40.4240729,
+        "lon": -86.9075626
+      }
+    }
+  },
+  {
+    "task_id": "WL-DIR-008",
+    "operation": "directionality",
+    "prompt": "I'm at Station 21 in West Lafayette, IN. Which direction is Church of the Blessed Sacrament from here?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "direction": "E",
+      "bearing_deg": 87.08,
+      "distance_km": 2.764,
+      "location_a": {
+        "osm_id": 858277625,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Church of the Blessed Sacrament",
+        "address": "2224 Sacramento Drive, West Lafayette, IN 47906",
+        "lat": 40.4496408,
+        "lon": -86.91181566867817
+      },
+      "location_b": {
+        "osm_id": 449581199,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Station 21",
+        "address": "2110 McCormick Road, West Lafayette, IN 47906",
+        "lat": 40.448377300000004,
+        "lon": -86.94443623309718
+      }
+    }
+  },
+  {
+    "task_id": "WL-DIR-009",
+    "operation": "directionality",
+    "prompt": "Give the compass direction from Mollenkopf Athletic Facility to Zucrow Combustion Research Lab in West Lafayette, IN.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "direction": "SW",
+      "bearing_deg": 223.62,
+      "distance_km": 3.045,
+      "location_a": {
+        "osm_id": 301913303,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Zucrow Combustion Research Lab",
+        "address": "512 Allison Road, West Lafayette, IN 47907",
+        "lat": 40.4154058,
+        "lon": -86.94134625894907
+      },
+      "location_b": {
+        "osm_id": 8008544236,
+        "source_table": "osm.planet_osm_point",
+        "name": "Mollenkopf Athletic Facility",
+        "address": "1225 Northwestern Avenue, West Lafayette, IN 47907",
+        "lat": 40.4352337,
+        "lon": -86.9165301
+      }
+    }
+  },
+  {
+    "task_id": "WL-FWD-000",
+    "operation": "geocode",
+    "prompt": "What are the coordinates of Four Points by Sheraton, West Lafayette, IN?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 71497503,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Four Points by Sheraton",
+        "address": "1600 Cumberland Avenue, West Lafayette, IN 47906",
+        "lat": 40.4599069,
+        "lon": -86.93609691549621
+      }
+    }
+  },
+  {
+    "task_id": "WL-FWD-001",
+    "operation": "geocode",
+    "prompt": "Where exactly is Mackey Arena, West Lafayette, IN? I need its latitude and longitude.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 74144839,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Mackey Arena",
+        "address": "900 John R Wooden Drive, West Lafayette, IN 47907",
+        "lat": 40.43333495,
+        "lon": -86.9161711527253
+      }
+    }
+  },
+  {
+    "task_id": "WL-FWD-002",
+    "operation": "geocode",
+    "prompt": "Please find the latitude and longitude of Weida Apartments, West Lafayette, IN.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 302287861,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Weida Apartments",
+        "address": "500 N River Road, West Lafayette, IN 47906",
+        "lat": 40.42906005,
+        "lon": -86.89999958383602
+      }
+    }
+  },
+  {
+    "task_id": "WL-FWD-003",
+    "operation": "geocode",
+    "prompt": "I'm looking for the lat/long of Neil Armstrong Hall of Engineering (ARMS), West Lafayette, IN.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 117146481,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Neil Armstrong Hall of Engineering (ARMS)",
+        "address": "701 W. Stadium Ave., West Lafayette, IN 47907",
+        "lat": 40.430915850000005,
+        "lon": -86.91499201180395
+      }
+    }
+  },
+  {
+    "task_id": "WL-FWD-004",
+    "operation": "geocode",
+    "prompt": "Look up the GPS coordinates for Chapel of the Good Shepherd, West Lafayette, IN.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 869993661,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Chapel of the Good Shepherd",
+        "address": "610 Meridian Street, West Lafayette, IN 47906",
+        "lat": 40.43442125,
+        "lon": -86.91342193932343
+      }
+    }
+  },
+  {
+    "task_id": "WL-FWD-005",
+    "operation": "geocode",
+    "prompt": "Could you give me the latitude and longitude of Wabash Valley Education Center, West Lafayette, IN?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 859101271,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Wabash Valley Education Center",
+        "address": "3061 Benton Street, West Lafayette, IN 47906",
+        "lat": 40.4622825,
+        "lon": -86.90647072687239
+      }
+    }
+  },
+  {
+    "task_id": "WL-FWD-006",
+    "operation": "geocode",
+    "prompt": "Cook Research, Inc., West Lafayette, IN: what are its coordinates?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 586882736,
+        "source_table": "osm.planet_osm_point",
+        "name": "Cook Research, Inc.",
+        "address": "1 Geddes Way, West Lafayette, IN 47906",
+        "lat": 40.463756,
+        "lon": -86.938835
+      }
+    }
+  },
+  {
+    "task_id": "WL-FWD-007",
+    "operation": "geocode",
+    "prompt": "Get me the latitude/longitude of The Sage's Shoppe, West Lafayette, IN.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 5041255989,
+        "source_table": "osm.planet_osm_point",
+        "name": "The Sage's Shoppe",
+        "address": "1009 Sagamore Parkway, West Lafayette, IN 47906",
+        "lat": 40.4529218,
+        "lon": -86.9203615
+      }
+    }
+  },
+  {
+    "task_id": "WL-FWD-008",
+    "operation": "geocode",
+    "prompt": "I want to find Universal Fitness, West Lafayette, IN on a map. What coordinates should I use?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 11128893671,
+        "source_table": "osm.planet_osm_point",
+        "name": "Universal Fitness",
+        "address": "334 Brown Street, West Lafayette, IN 47906",
+        "lat": 40.4232968,
+        "lon": -86.901085
+      }
+    }
+  },
+  {
+    "task_id": "WL-FWD-009",
+    "operation": "geocode",
+    "prompt": "Pin down the coordinates of Brokerage Brewing Co., West Lafayette, IN, please.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 10817143333,
+        "source_table": "osm.planet_osm_point",
+        "name": "Brokerage Brewing Co.",
+        "address": "2516 Covington Street, West Lafayette, IN 47906",
+        "lat": 40.4540326,
+        "lon": -86.9141096
+      }
+    }
+  },
+  {
+    "task_id": "WL-REV-000",
+    "operation": "geocode_reverse",
+    "prompt": "What is located at latitude 40.459907, longitude -86.936097?",
+    "target_lat": 40.459907,
+    "target_lon": -86.936097,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 71497503,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Four Points by Sheraton",
+        "address": "1600 Cumberland Avenue, West Lafayette, IN 47906",
+        "lat": 40.4599069,
+        "lon": -86.93609691549621
+      }
+    }
+  },
+  {
+    "task_id": "WL-REV-001",
+    "operation": "geocode_reverse",
+    "prompt": "Which place is at (lat, lon) = (40.433335, -86.916171)?",
+    "target_lat": 40.433335,
+    "target_lon": -86.916171,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 74144839,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Mackey Arena",
+        "address": "900 John R Wooden Drive, West Lafayette, IN 47907",
+        "lat": 40.43333495,
+        "lon": -86.9161711527253
+      }
+    }
+  },
+  {
+    "task_id": "WL-REV-002",
+    "operation": "geocode_reverse",
+    "prompt": "Tell me what's at longitude -86.900000, latitude 40.429060.",
+    "target_lat": 40.42906,
+    "target_lon": -86.9,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 302287861,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Weida Apartments",
+        "address": "500 N River Road, West Lafayette, IN 47906",
+        "lat": 40.42906005,
+        "lon": -86.89999958383602
+      }
+    }
+  },
+  {
+    "task_id": "WL-REV-003",
+    "operation": "geocode_reverse",
+    "prompt": "I have the point lat=40.430916, lon=-86.914992. What place is at that location?",
+    "target_lat": 40.430916,
+    "target_lon": -86.914992,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 117146481,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Neil Armstrong Hall of Engineering (ARMS)",
+        "address": "701 W. Stadium Ave., West Lafayette, IN 47907",
+        "lat": 40.430915850000005,
+        "lon": -86.91499201180395
+      }
+    }
+  },
+  {
+    "task_id": "WL-REV-004",
+    "operation": "geocode_reverse",
+    "prompt": "Identify the place at (longitude -86.913422, latitude 40.434421).",
+    "target_lat": 40.434421,
+    "target_lon": -86.913422,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 869993661,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Chapel of the Good Shepherd",
+        "address": "610 Meridian Street, West Lafayette, IN 47906",
+        "lat": 40.43442125,
+        "lon": -86.91342193932343
+      }
+    }
+  },
+  {
+    "task_id": "WL-REV-005",
+    "operation": "geocode_reverse",
+    "prompt": "Reverse geocode this location: latitude=40.462283, longitude=-86.906471.",
+    "target_lat": 40.462283,
+    "target_lon": -86.906471,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 859101271,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Wabash Valley Education Center",
+        "address": "3061 Benton Street, West Lafayette, IN 47906",
+        "lat": 40.4622825,
+        "lon": -86.90647072687239
+      }
+    }
+  },
+  {
+    "task_id": "WL-REV-006",
+    "operation": "geocode_reverse",
+    "prompt": "What place sits at lon -86.938835, lat 40.463756?",
+    "target_lat": 40.463756,
+    "target_lon": -86.938835,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 586882736,
+        "source_table": "osm.planet_osm_point",
+        "name": "Cook Research, Inc.",
+        "address": "1 Geddes Way, West Lafayette, IN 47906",
+        "lat": 40.463756,
+        "lon": -86.938835
+      }
+    }
+  },
+  {
+    "task_id": "WL-REV-007",
+    "operation": "geocode_reverse",
+    "prompt": "Can you tell me what is at (lon, lat) = (-86.920361, 40.452922)?",
+    "target_lat": 40.452922,
+    "target_lon": -86.920361,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 5041255989,
+        "source_table": "osm.planet_osm_point",
+        "name": "The Sage's Shoppe",
+        "address": "1009 Sagamore Parkway, West Lafayette, IN 47906",
+        "lat": 40.4529218,
+        "lon": -86.9203615
+      }
+    }
+  },
+  {
+    "task_id": "WL-REV-008",
+    "operation": "geocode_reverse",
+    "prompt": "Someone dropped a pin at latitude 40.423297 and longitude -86.901085. What's there?",
+    "target_lat": 40.423297,
+    "target_lon": -86.901085,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 11128893671,
+        "source_table": "osm.planet_osm_point",
+        "name": "Universal Fitness",
+        "address": "334 Brown Street, West Lafayette, IN 47906",
+        "lat": 40.4232968,
+        "lon": -86.901085
+      }
+    }
+  },
+  {
+    "task_id": "WL-REV-009",
+    "operation": "geocode_reverse",
+    "prompt": "Name the place found at Lat: 40.454033, Long: -86.914110.",
+    "target_lat": 40.454033,
+    "target_lon": -86.91411,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 10817143333,
+        "source_table": "osm.planet_osm_point",
+        "name": "Brokerage Brewing Co.",
+        "address": "2516 Covington Street, West Lafayette, IN 47906",
+        "lat": 40.4540326,
+        "lon": -86.9141096
+      }
+    }
+  },
+  {
+    "task_id": "WL-KNN-000",
+    "operation": "knn",
+    "prompt": "Name the 8 libraries nearest to Boilermaker Station Welcome Center in West Lafayette, IN by geodesic distance.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "k": 8,
+      "distance_type": "euclidean",
+      "include": {
+        "amenity": "library"
+      },
+      "mode": null,
+      "profile": null,
+      "reference": {
+        "osm_id": 11515586281,
+        "source_table": "osm.planet_osm_point",
+        "name": "Boilermaker Station Welcome Center",
+        "address": "128 Memorial Mall Drive, West Lafayette, IN 47907",
+        "lat": 40.4247514,
+        "lon": -86.9120263
+      },
+      "locations": [
+        {
+          "osm_id": 158307900,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Hicks Undergraduate Library (HIKS)",
+          "address": "504 West State Street, West Lafayette, IN 47907",
+          "lat": 40.424536450000005,
+          "lon": -86.91265705325289,
+          "distance_m": 58.61
+        },
+        {
+          "osm_id": 3056718617,
+          "source_table": "osm.planet_osm_point",
+          "name": "Humanities, Social Sciences and Education (HSSE) Library",
+          "address": "504 West State Street, West Lafayette, IN 47907",
+          "lat": 40.4250476,
+          "lon": -86.9131065,
+          "distance_m": 97.39
+        },
+        {
+          "osm_id": 3056735347,
+          "source_table": "osm.planet_osm_point",
+          "name": "Parrish Library of Management & Economics",
+          "address": "504 State Street, West Lafayette, IN 47907",
+          "lat": 40.4236722,
+          "lon": -86.9107713,
+          "distance_m": 160.32
+        },
+        {
+          "osm_id": 10858716023,
+          "source_table": "osm.planet_osm_point",
+          "name": "Library of Engineering and Science",
+          "address": "610 Purdue Mall, West Lafayette, IN 47907",
+          "lat": 40.4275084,
+          "lon": -86.91323,
+          "distance_m": 322.74
+        },
+        {
+          "osm_id": 3056730281,
+          "source_table": "osm.planet_osm_point",
+          "name": "Mathematical Sciences Library",
+          "address": "105 North University Street, West Lafayette, IN 47907",
+          "lat": 40.4262569,
+          "lon": -86.9157551,
+          "distance_m": 357.88
+        },
+        {
+          "osm_id": 71497515,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "West Lafayette Public Library",
+          "address": "208 West Columbia Street, West Lafayette, IN 47906",
+          "lat": 40.425111099999995,
+          "lon": -86.90736947573205,
+          "distance_m": 397.2
+        },
+        {
+          "osm_id": 3056735360,
+          "source_table": "osm.planet_osm_point",
+          "name": "Veterinary Medical Library",
+          "address": "625 Harrison Street, West Lafayette, IN 47907",
+          "lat": 40.419402,
+          "lon": -86.9148787,
+          "distance_m": 641.44
+        },
+        {
+          "osm_id": 3056735345,
+          "source_table": "osm.planet_osm_point",
+          "name": "Black Cultural Center Library",
+          "address": "1100 3rd Street, West Lafayette, IN 47907",
+          "lat": 40.427493,
+          "lon": -86.9194393,
+          "distance_m": 698.87
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-KNN-001",
+    "operation": "knn",
+    "prompt": "Which 6 hairdressers are closest to Prestige Inn in West Lafayette, IN?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "k": 6,
+      "distance_type": "euclidean",
+      "include": {
+        "shop": "hairdresser"
+      },
+      "mode": null,
+      "profile": null,
+      "reference": {
+        "osm_id": 692636024,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Prestige Inn",
+        "address": "1217 Sagamore Parkway West, West Lafayette, IN 47906",
+        "lat": 40.45292515,
+        "lon": -86.9258257980612
+      },
+      "locations": [
+        {
+          "osm_id": 10145452897,
+          "source_table": "osm.planet_osm_point",
+          "name": "Sport Clips",
+          "address": "1052 Sagamore Parkway West, West Lafayette, IN 47906",
+          "lat": 40.4539782,
+          "lon": -86.9184073,
+          "distance_m": 640.06
+        },
+        {
+          "osm_id": 10145452884,
+          "source_table": "osm.planet_osm_point",
+          "name": "Lanie's Barber Shop",
+          "address": "455 Sagamore Parkway West, West Lafayette, IN 47906",
+          "lat": 40.4523303,
+          "lon": -86.9133882,
+          "distance_m": 1057.11
+        },
+        {
+          "osm_id": 10145452885,
+          "source_table": "osm.planet_osm_point",
+          "name": "Emorium Hair Salon",
+          "address": "455 Sagamore Parkway West, West Lafayette, IN 47906",
+          "lat": 40.4522745,
+          "lon": -86.9131322,
+          "distance_m": 1079.19
+        },
+        {
+          "osm_id": 10817143332,
+          "source_table": "osm.planet_osm_point",
+          "name": "Hair HQ",
+          "address": "500 Sagamore Parkway West, West Lafayette, IN 47906",
+          "lat": 40.4540453,
+          "lon": -86.9127121,
+          "distance_m": 1119.32
+        },
+        {
+          "osm_id": 9525991460,
+          "source_table": "osm.planet_osm_point",
+          "name": "Renu Hair Studio",
+          "address": "Garfield Street, West Lafayette, IN 46906",
+          "lat": 40.4315674,
+          "lon": -86.9129473,
+          "distance_m": 2611.22
+        },
+        {
+          "osm_id": 8015321772,
+          "source_table": "osm.planet_osm_point",
+          "name": "Great Clips",
+          "address": "West Lafayette, IN 47406",
+          "lat": 40.467925,
+          "lon": -86.9571762,
+          "distance_m": 3137.67
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-KNN-002",
+    "operation": "knn",
+    "prompt": "What are the 5 nearest supermarkets to Montessori School of Greater Lafayette in West Lafayette, IN?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "k": 5,
+      "distance_type": "euclidean",
+      "include": {
+        "shop": "supermarket"
+      },
+      "mode": null,
+      "profile": null,
+      "reference": {
+        "osm_id": 859875209,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Montessori School of Greater Lafayette",
+        "address": "2552 Soldiers Home Road, West Lafayette, IN 47906",
+        "lat": 40.453376500000005,
+        "lon": -86.9022981288391
+      },
+      "locations": [
+        {
+          "osm_id": 115420604,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "ALDI",
+          "address": "210 Sagamore Parkway West, West Lafayette, IN 47906",
+          "lat": 40.4538619,
+          "lon": -86.9087813912235,
+          "distance_m": 552.59
+        },
+        {
+          "osm_id": -10931729,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Fresh Thyme",
+          "address": "2410 N. Salisbury St., West Lafayette, IN 47906",
+          "lat": 40.4519176,
+          "lon": -86.91392168538545,
+          "distance_m": 999.22
+        },
+        {
+          "osm_id": 115420574,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "PayLess",
+          "address": "Lincoln Trail, West Lafayette, IN 47906",
+          "lat": 40.45520715,
+          "lon": -86.91762896935936,
+          "distance_m": 1316.23
+        },
+        {
+          "osm_id": 743176128,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Asia Global Market",
+          "address": "2400 Yeager Road, West Lafayette, IN 47906",
+          "lat": 40.452205649999996,
+          "lon": -86.92407008295456,
+          "distance_m": 1851.42
+        },
+        {
+          "osm_id": 74270068,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Walmart Supercenter",
+          "address": "2801 Northwestern Avenue, West Lafayette, IN 47906",
+          "lat": 40.4570539,
+          "lon": -86.93286562314597,
+          "distance_m": 2624.82
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-KNN-003",
+    "operation": "knn",
+    "prompt": "I'm at Margerum City Hall in West Lafayette, IN. What are the 3 closest bars?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "k": 3,
+      "distance_type": "euclidean",
+      "include": {
+        "amenity": "bar"
+      },
+      "mode": null,
+      "profile": null,
+      "reference": {
+        "osm_id": 159752237,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Margerum City Hall",
+        "address": "222 North Chauncey Avenue, West Lafayette, IN 47906",
+        "lat": 40.42531685,
+        "lon": -86.90649875231443
+      },
+      "locations": [
+        {
+          "osm_id": 1705345050,
+          "source_table": "osm.planet_osm_point",
+          "name": "Brother's",
+          "address": "306 West State Street, West Lafayette, IN 47906",
+          "lat": 40.4240565,
+          "lon": -86.9083794,
+          "distance_m": 212.27
+        },
+        {
+          "osm_id": 1705344772,
+          "source_table": "osm.planet_osm_point",
+          "name": "Harry's Chocolate Shop",
+          "address": "329 West State Street, West Lafayette, IN 46906",
+          "lat": 40.4238116,
+          "lon": -86.9090675,
+          "distance_m": 274.7
+        },
+        {
+          "osm_id": 3465410707,
+          "source_table": "osm.planet_osm_point",
+          "name": "The Pint",
+          "address": "111 South River Road, West Lafayette, IN 47906",
+          "lat": 40.4219299,
+          "lon": -86.9046949,
+          "distance_m": 406.06
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-KNN-004",
+    "operation": "knn",
+    "prompt": "Find the closest gas station to Wright Flower Shop in West Lafayette, IN, measured as the crow flies.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "k": 1,
+      "distance_type": "euclidean",
+      "include": {
+        "amenity": "fuel"
+      },
+      "mode": null,
+      "profile": null,
+      "reference": {
+        "osm_id": 743161781,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Wright Flower Shop",
+        "address": "1199 Sagamore Parkway West, West Lafayette, IN 47906",
+        "lat": 40.4530637,
+        "lon": -86.92405867846
+      },
+      "locations": [
+        {
+          "osm_id": 596675156,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Circle K",
+          "address": "1209 Sagamore Parkway West, West Lafayette, IN 47906",
+          "lat": 40.452958550000005,
+          "lon": -86.924999,
+          "distance_m": 80.61
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-KNN-005",
+    "operation": "knn",
+    "prompt": "Show me the 4 restaurants nearest Federated Church of West Lafayette in West Lafayette, IN by driving distance.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "k": 4,
+      "distance_type": "network",
+      "include": {
+        "amenity": "restaurant"
+      },
+      "mode": "car",
+      "profile": "car",
+      "reference": {
+        "osm_id": 451616613,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Federated Church of West Lafayette",
+        "address": "2400 Sycamore Lane, West Lafayette, IN 47906",
+        "lat": 40.4509905,
+        "lon": -86.91909269790307
+      },
+      "locations": [
+        {
+          "osm_id": 8001561653,
+          "source_table": "osm.planet_osm_point",
+          "name": "Heisei",
+          "address": "907 Sagamore Parkway West, West Lafayette, IN 47906",
+          "lat": 40.451947,
+          "lon": -86.9196859,
+          "distance_m": 281.39,
+          "time_min": 0.7
+        },
+        {
+          "osm_id": 12299376208,
+          "source_table": "osm.planet_osm_point",
+          "name": "Country Cafe",
+          "address": "705 Sagamore Parkway, West Lafayette, IN 47906",
+          "lat": 40.4529171,
+          "lon": -86.9185193,
+          "distance_m": 318.82,
+          "time_min": 0.81
+        },
+        {
+          "osm_id": 1312604482,
+          "source_table": "osm.planet_osm_point",
+          "name": "Azzip Pizza",
+          "address": "939 Sagamore Parkway West, west, IN 47906",
+          "lat": 40.4529435,
+          "lon": -86.9197144,
+          "distance_m": 346.41,
+          "time_min": 0.98
+        },
+        {
+          "osm_id": 10649911685,
+          "source_table": "osm.planet_osm_point",
+          "name": "Katana Sushi & Ramen",
+          "address": "1048 Sagamore Parkway West, West Lafayette, IN 47906",
+          "lat": 40.4541593,
+          "lon": -86.9185116,
+          "distance_m": 496.48,
+          "time_min": 1.35
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-KNN-006",
+    "operation": "knn",
+    "prompt": "Starting from Crossing At Chauncey Hill in West Lafayette, IN, which 2 banks are nearest by driving distance?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "k": 2,
+      "distance_type": "network",
+      "include": {
+        "amenity": "bank"
+      },
+      "mode": "car",
+      "profile": "car",
+      "reference": {
+        "osm_id": 886359912,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Crossing At Chauncey Hill",
+        "address": "202 South Chauncey Avenue, West Lafayette, IN 47906",
+        "lat": 40.4215461,
+        "lon": -86.90744311856776
+      },
+      "locations": [
+        {
+          "osm_id": 116427263,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Chase",
+          "address": "West State Street, West Lafayette, IN 46906",
+          "lat": 40.42378175,
+          "lon": -86.90755979592393,
+          "distance_m": 273.97,
+          "time_min": 0.56
+        },
+        {
+          "osm_id": 3537216663,
+          "source_table": "osm.planet_osm_point",
+          "name": "Purdue Federal Credit Union",
+          "address": "516 Northwestern Avenue, West Lafayette, IN 47906",
+          "lat": 40.4307049,
+          "lon": -86.913023,
+          "distance_m": 1315.94,
+          "time_min": 2.28
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-KNN-007",
+    "operation": "knn",
+    "prompt": "Could you list the 3 fast food restaurants closest to Dos Amigos Mexican Restaurant in West Lafayette, IN by walking distance?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "k": 3,
+      "distance_type": "network",
+      "include": {
+        "amenity": "fast_food"
+      },
+      "mode": "foot",
+      "profile": "foot",
+      "reference": {
+        "osm_id": 9776704352,
+        "source_table": "osm.planet_osm_point",
+        "name": "Dos Amigos Mexican Restaurant",
+        "address": "360 Brown Street, West Lafayette, IN 47906",
+        "lat": 40.4233153,
+        "lon": -86.899411
+      },
+      "locations": [
+        {
+          "osm_id": 116427259,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Wendy's",
+          "address": "252 East State Street, West Lafayette, IN 47906",
+          "lat": 40.4216446,
+          "lon": -86.9022445835606,
+          "distance_m": 457.3,
+          "time_min": 5.49
+        },
+        {
+          "osm_id": 1312604473,
+          "source_table": "osm.planet_osm_point",
+          "name": "Panera Bread",
+          "address": "328 East State Street, West Lafayette, IN 47906",
+          "lat": 40.4210813,
+          "lon": -86.9008135,
+          "distance_m": 481.9,
+          "time_min": 5.78
+        },
+        {
+          "osm_id": 116427228,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "McDonald's",
+          "address": "124 East State Street, West Lafayette, IN 47906",
+          "lat": 40.4225918,
+          "lon": -86.90479190829487,
+          "distance_m": 568.85,
+          "time_min": 6.83
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-KNN-008",
+    "operation": "knn",
+    "prompt": "What 3 cafes are nearest to Dauch Alumni Center in West Lafayette, IN by walking distance?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "k": 3,
+      "distance_type": "network",
+      "include": {
+        "amenity": "cafe"
+      },
+      "mode": "foot",
+      "profile": "foot",
+      "reference": {
+        "osm_id": 117396626,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Dauch Alumni Center",
+        "address": "403 West Wood Street, West Lafayette, IN 47907",
+        "lat": 40.4218027,
+        "lon": -86.91087288641947
+      },
+      "locations": [
+        {
+          "osm_id": 12507479705,
+          "source_table": "osm.planet_osm_point",
+          "name": "Leaps Coffee Shop",
+          "address": "201 North Grant Street, West Lafayette, IN 46906",
+          "lat": 40.4247747,
+          "lon": -86.9106629,
+          "distance_m": 346.86,
+          "time_min": 4.18
+        },
+        {
+          "osm_id": 10163849072,
+          "source_table": "osm.planet_osm_point",
+          "name": "Tsaocaa",
+          "address": "318 West State Street, West Lafayette, IN 47906",
+          "lat": 40.4240876,
+          "lon": -86.908882,
+          "distance_m": 384.53,
+          "time_min": 4.61
+        },
+        {
+          "osm_id": 6035932734,
+          "source_table": "osm.planet_osm_point",
+          "name": "Starbucks",
+          "address": "101 Grant Street, West Lafayette, IN 47906",
+          "lat": 40.4250047,
+          "lon": -86.9115419,
+          "distance_m": 456.89,
+          "time_min": 5.5
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-KNN-009",
+    "operation": "knn",
+    "prompt": "What's the nearest car wash to Creekside Animal Hospital in West Lafayette, IN by cycling distance?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "k": 1,
+      "distance_type": "network",
+      "include": {
+        "amenity": "car_wash"
+      },
+      "mode": "bike",
+      "profile": "bike",
+      "reference": {
+        "osm_id": 451711014,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Creekside Animal Hospital",
+        "address": "180 Sagamore Parkway West, West Lafayette, IN 47906",
+        "lat": 40.45366715,
+        "lon": -86.90758120000001
+      },
+      "locations": [
+        {
+          "osm_id": 283453662,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Crew Carwash",
+          "address": "277 Sagamore Parkway West, West Lafayette, IN 47906",
+          "lat": 40.452489150000005,
+          "lon": -86.91070087589463,
+          "distance_m": 700.98,
+          "time_min": 2.86
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-RANGE-000",
+    "operation": "range_query",
+    "prompt": "Which hairdressers are within 400 meters of Sunspot Natural Market in West Lafayette, IN?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "shape": "circle",
+      "include": {
+        "shop": "hairdresser"
+      },
+      "reference_points": [
+        {
+          "osm_id": 8014671934,
+          "source_table": "osm.planet_osm_point",
+          "name": "Sunspot Natural Market",
+          "address": "500 Sagamore Parkway West, West Lafayette, IN 47906",
+          "lat": 40.454119,
+          "lon": -86.9122126
+        }
+      ],
+      "radius_m": 400.0,
+      "locations": [
+        {
+          "osm_id": 10817143332,
+          "source_table": "osm.planet_osm_point",
+          "name": "Hair HQ",
+          "address": "500 Sagamore Parkway West, West Lafayette, IN 47906",
+          "lat": 40.4540453,
+          "lon": -86.9127121
+        },
+        {
+          "osm_id": 10145452885,
+          "source_table": "osm.planet_osm_point",
+          "name": "Emorium Hair Salon",
+          "address": "455 Sagamore Parkway West, West Lafayette, IN 47906",
+          "lat": 40.4522745,
+          "lon": -86.9131322
+        },
+        {
+          "osm_id": 10145452884,
+          "source_table": "osm.planet_osm_point",
+          "name": "Lanie's Barber Shop",
+          "address": "455 Sagamore Parkway West, West Lafayette, IN 47906",
+          "lat": 40.4523303,
+          "lon": -86.9133882
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-RANGE-001",
+    "operation": "range_query",
+    "prompt": "List the libraries within 700 meters of Margerum City Hall in West Lafayette, IN.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "shape": "circle",
+      "include": {
+        "amenity": "library"
+      },
+      "reference_points": [
+        {
+          "osm_id": 159752237,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Margerum City Hall",
+          "address": "222 North Chauncey Avenue, West Lafayette, IN 47906",
+          "lat": 40.42531685,
+          "lon": -86.90649875231443
+        }
+      ],
+      "radius_m": 700.0,
+      "locations": [
+        {
+          "osm_id": 71497515,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "West Lafayette Public Library",
+          "address": "208 West Columbia Street, West Lafayette, IN 47906",
+          "lat": 40.425111099999995,
+          "lon": -86.90736947573205
+        },
+        {
+          "osm_id": 3056735347,
+          "source_table": "osm.planet_osm_point",
+          "name": "Parrish Library of Management & Economics",
+          "address": "504 State Street, West Lafayette, IN 47907",
+          "lat": 40.4236722,
+          "lon": -86.9107713
+        },
+        {
+          "osm_id": 158307900,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Hicks Undergraduate Library (HIKS)",
+          "address": "504 West State Street, West Lafayette, IN 47907",
+          "lat": 40.424536450000005,
+          "lon": -86.91265705325289
+        },
+        {
+          "osm_id": 3056718617,
+          "source_table": "osm.planet_osm_point",
+          "name": "Humanities, Social Sciences and Education (HSSE) Library",
+          "address": "504 West State Street, West Lafayette, IN 47907",
+          "lat": 40.4250476,
+          "lon": -86.9131065
+        },
+        {
+          "osm_id": 10858716023,
+          "source_table": "osm.planet_osm_point",
+          "name": "Library of Engineering and Science",
+          "address": "610 Purdue Mall, West Lafayette, IN 47907",
+          "lat": 40.4275084,
+          "lon": -86.91323
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-RANGE-002",
+    "operation": "range_query",
+    "prompt": "Find all banks within a radius of 1200 meters around Serenity Hospice in West Lafayette, IN.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "shape": "circle",
+      "include": {
+        "amenity": "bank"
+      },
+      "reference_points": [
+        {
+          "osm_id": 8001561665,
+          "source_table": "osm.planet_osm_point",
+          "name": "Serenity Hospice",
+          "address": "724 West Navajo Street, West Lafayette, IN 47906",
+          "lat": 40.452361,
+          "lon": -86.9181265
+        }
+      ],
+      "radius_m": 1200.0,
+      "locations": [
+        {
+          "osm_id": 451617117,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Huntington Bank",
+          "address": "2405 North Salisbury Street, West Lafayette, IN 47906",
+          "lat": 40.45223455,
+          "lon": -86.91626455983348
+        },
+        {
+          "osm_id": 451616909,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "First Merchants Bank",
+          "address": "2329 North Salisbury Street, West Lafayette, IN 47906",
+          "lat": 40.451467699999995,
+          "lon": -86.91624794420571
+        },
+        {
+          "osm_id": 451617121,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Regions Bank",
+          "address": "2426 Sycamore Lane, West Lafayette, IN 47906",
+          "lat": 40.452977849999996,
+          "lon": -86.92239202366281
+        },
+        {
+          "osm_id": 283453660,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Chase",
+          "address": "309 Sagamore Parkway West, West Lafayette, IN 47906",
+          "lat": 40.452578450000004,
+          "lon": -86.911585229
+        },
+        {
+          "osm_id": 8000961896,
+          "source_table": "osm.planet_osm_point",
+          "name": "Fifth Third Bank",
+          "address": "500 Sagamore Parkway West, West Lafayette, IN 47906",
+          "lat": 40.4537074,
+          "lon": -86.911662
+        },
+        {
+          "osm_id": 860270035,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Horizon Bank",
+          "address": "1980 Northwestern Avenue, West Lafayette, IN 47906",
+          "lat": 40.44771695,
+          "lon": -86.92235493498693
+        },
+        {
+          "osm_id": 473799719,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Farmers and Merchants Bank",
+          "address": "275 Sagamore Parkway West, West Lafayette, IN 47906",
+          "lat": 40.45240125,
+          "lon": -86.91013436411606
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-RANGE-003",
+    "operation": "range_query",
+    "prompt": "Which bars are within 700 meters of Triple XXX Family Restaurant in West Lafayette, IN?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "shape": "circle",
+      "include": {
+        "amenity": "bar"
+      },
+      "reference_points": [
+        {
+          "osm_id": 116427250,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Triple XXX Family Restaurant",
+          "address": "2 North Salisbury Street, West Lafayette, IN 47906",
+          "lat": 40.42272295,
+          "lon": -86.9054327544001
+        }
+      ],
+      "radius_m": 700.0,
+      "locations": [
+        {
+          "osm_id": 3465410707,
+          "source_table": "osm.planet_osm_point",
+          "name": "The Pint",
+          "address": "111 South River Road, West Lafayette, IN 47906",
+          "lat": 40.4219299,
+          "lon": -86.9046949
+        },
+        {
+          "osm_id": 1705345050,
+          "source_table": "osm.planet_osm_point",
+          "name": "Brother's",
+          "address": "306 West State Street, West Lafayette, IN 47906",
+          "lat": 40.4240565,
+          "lon": -86.9083794
+        },
+        {
+          "osm_id": 1705344772,
+          "source_table": "osm.planet_osm_point",
+          "name": "Harry's Chocolate Shop",
+          "address": "329 West State Street, West Lafayette, IN 46906",
+          "lat": 40.4238116,
+          "lon": -86.9090675
+        },
+        {
+          "osm_id": 10713410711,
+          "source_table": "osm.planet_osm_point",
+          "name": "Neon Cactus",
+          "address": "360 Brown Street, West Lafayette, IN 47906",
+          "lat": 40.4233125,
+          "lon": -86.9004768
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-RANGE-004",
+    "operation": "range_query",
+    "prompt": "Show me the hotels no farther than 1200 meters from BASi in West Lafayette, IN.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "shape": "circle",
+      "include": {
+        "tourism": "hotel"
+      },
+      "reference_points": [
+        {
+          "osm_id": 283526722,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "BASi",
+          "address": "2701 Kent Avenue, West Lafayette, IN 47906",
+          "lat": 40.45879085,
+          "lon": -86.92974923579048
+        }
+      ],
+      "radius_m": 1200.0,
+      "locations": [
+        {
+          "osm_id": 71497503,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Four Points by Sheraton",
+          "address": "1600 Cumberland Avenue, West Lafayette, IN 47906",
+          "lat": 40.4599069,
+          "lon": -86.93609691549621
+        },
+        {
+          "osm_id": 692636024,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Prestige Inn",
+          "address": "1217 Sagamore Parkway West, West Lafayette, IN 47906",
+          "lat": 40.45292515,
+          "lon": -86.9258257980612
+        },
+        {
+          "osm_id": 1410355674,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Home2 Suites by Hilton West Lafayette",
+          "address": "1710 Sachem Boulevard, West Lafayette, IN 47906",
+          "lat": 40.46195145,
+          "lon": -86.93790281672224
+        },
+        {
+          "osm_id": 1410355207,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "TownePlace Suites West Lafayette",
+          "address": "1750 Sachem Boulevard, West Lafayette, IN 47906",
+          "lat": 40.46154435,
+          "lon": -86.93857424943894
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-RANGE-005",
+    "operation": "range_query",
+    "prompt": "What fast food restaurants are inside the rectangle formed by opposite corners WLFI-TV CBS 18 and Community Yoga in West Lafayette, IN?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "shape": "bbox",
+      "include": {
+        "amenity": "fast_food"
+      },
+      "reference_points": [
+        {
+          "osm_id": 451618287,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "WLFI-TV CBS 18",
+          "address": "2605 Yeager Road, West Lafayette, IN 47906",
+          "lat": 40.45589135,
+          "lon": -86.92543709981877
+        },
+        {
+          "osm_id": 10145452889,
+          "source_table": "osm.planet_osm_point",
+          "name": "Community Yoga",
+          "address": "482 West Navajo Street, West Lafayette, IN 47906",
+          "lat": 40.4517832,
+          "lon": -86.9120504
+        }
+      ],
+      "radius_m": null,
+      "locations": [
+        {
+          "osm_id": 71497483,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Burger King",
+          "address": "1069 Sagamore Parkway West, West Lafayette, IN 47906",
+          "lat": 40.4529452,
+          "lon": -86.92130789577068
+        },
+        {
+          "osm_id": 71497498,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Wendy's",
+          "address": "701 Sagamore Parkway, West Lafayette, IN 47906",
+          "lat": 40.4528864,
+          "lon": -86.91814563184393
+        },
+        {
+          "osm_id": 71497504,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "KFC",
+          "address": "609 Sagamore Parkway West, West Lafayette, IN 47906",
+          "lat": 40.452807,
+          "lon": -86.91693923961611
+        },
+        {
+          "osm_id": 71497510,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "McDonald's",
+          "address": "613 Sagamore Parkway West, West Lafayette, IN 47906",
+          "lat": 40.4528425,
+          "lon": -86.91758141335903
+        },
+        {
+          "osm_id": 115420533,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Taco Bell",
+          "address": "1016 Sagamore Parkway, West Lafayette, IN 47906",
+          "lat": 40.4538118,
+          "lon": -86.91709709046322
+        },
+        {
+          "osm_id": 115420548,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Subway",
+          "address": "1060 Sagamore Parkway, West Lafayette, IN 47906",
+          "lat": 40.4538545,
+          "lon": -86.91916234179922
+        },
+        {
+          "osm_id": 283453648,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Arby's",
+          "address": "531 Sagamore Parkway West, West Lafayette, IN 47906",
+          "lat": 40.4528981,
+          "lon": -86.91483367188737
+        },
+        {
+          "osm_id": 283453656,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Dog 'n Suds",
+          "address": "401 Sagamore Parkway West, West Lafayette, IN 47906",
+          "lat": 40.452564249999995,
+          "lon": -86.91261442490793
+        },
+        {
+          "osm_id": 858326727,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Chipotle",
+          "address": "2400 North Salisbury Street, West Lafayette, IN 47906",
+          "lat": 40.4521699,
+          "lon": -86.91533152802145
+        },
+        {
+          "osm_id": 8000961897,
+          "source_table": "osm.planet_osm_point",
+          "name": "Jimmy John's",
+          "address": "1052 Sagamore Parkway West, West Lafayette, IN 47906",
+          "lat": 40.4538232,
+          "lon": -86.9184316
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-RANGE-006",
+    "operation": "range_query",
+    "prompt": "Which dentists fall within the rectangle that has Peppermill Village and Church of the Blessed Sacrament as opposite corners in West Lafayette, IN?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "shape": "bbox",
+      "include": {
+        "amenity": "dentist"
+      },
+      "reference_points": [
+        {
+          "osm_id": 859458289,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Peppermill Village",
+          "address": "3303 Peppermill Drive, West Lafayette, IN 47906",
+          "lat": 40.46234595,
+          "lon": -86.92570378176109
+        },
+        {
+          "osm_id": 858277625,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Church of the Blessed Sacrament",
+          "address": "2224 Sacramento Drive, West Lafayette, IN 47906",
+          "lat": 40.4496408,
+          "lon": -86.91181566867817
+        }
+      ],
+      "radius_m": null,
+      "locations": [
+        {
+          "osm_id": 10145452886,
+          "source_table": "osm.planet_osm_point",
+          "name": "Dr. John and Dr. Zach Bozic",
+          "address": "520 West Navajo Street, West Lafayette, IN 47906",
+          "lat": 40.4517076,
+          "lon": -86.9131779
+        },
+        {
+          "osm_id": 10145452887,
+          "source_table": "osm.planet_osm_point",
+          "name": "Dr. Donald L. Swoverland",
+          "address": "510 West Navajo Street, West Lafayette, IN 47906",
+          "lat": 40.4517043,
+          "lon": -86.9130534
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-RANGE-007",
+    "operation": "range_query",
+    "prompt": "Take Cumberland West and Covenant Presbyterian Church as opposite corners of a rectangle in West Lafayette, IN. What pharmacies lie inside it?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "shape": "bbox",
+      "include": {
+        "amenity": "pharmacy"
+      },
+      "reference_points": [
+        {
+          "osm_id": 859448660,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Cumberland West",
+          "address": "1070 Cumberland Avenue, West Lafayette, IN 47906",
+          "lat": 40.461201349999996,
+          "lon": -86.92250801594867
+        },
+        {
+          "osm_id": 473799724,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Covenant Presbyterian Church",
+          "address": "211 Knox Drive, West Lafayette, IN 47906",
+          "lat": 40.4486823,
+          "lon": -86.90209147349827
+        }
+      ],
+      "radius_m": null,
+      "locations": [
+        {
+          "osm_id": 283441572,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "CVS Pharmacy",
+          "address": "512 Sagamore Parkway West, West Lafayette, IN 47906",
+          "lat": 40.4538896,
+          "lon": -86.91467055239406
+        },
+        {
+          "osm_id": 693648536,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Walgreens",
+          "address": "1000 Sagamore Parkway West, West Lafayette, IN 47906",
+          "lat": 40.45399195,
+          "lon": -86.91636770812502
+        },
+        {
+          "osm_id": 10145452888,
+          "source_table": "osm.planet_osm_point",
+          "name": "CustomPlus Pharmac",
+          "address": "482 West Navajo Street, West Lafayette, IN 47906",
+          "lat": 40.4517832,
+          "lon": -86.9124797
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-RANGE-008",
+    "operation": "range_query",
+    "prompt": "Find the bookstores located in the rectangle with opposite corners at Elliott Hall of Music (ELLT) and Peppercorns Kitchen in West Lafayette, IN.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "shape": "bbox",
+      "include": {
+        "shop": "books"
+      },
+      "reference_points": [
+        {
+          "osm_id": 74151922,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Elliott Hall of Music (ELLT)",
+          "address": "712 3rd Street, West Lafayette, IN 47907",
+          "lat": 40.427903099999995,
+          "lon": -86.91493355660202
+        },
+        {
+          "osm_id": 11753746370,
+          "source_table": "osm.planet_osm_point",
+          "name": "Peppercorns Kitchen",
+          "address": "360 East State Street, West Lafayette, IN 47906",
+          "lat": 40.4210416,
+          "lon": -86.9008808
+        }
+      ],
+      "radius_m": null,
+      "locations": [
+        {
+          "osm_id": 1312604324,
+          "source_table": "osm.planet_osm_point",
+          "name": "Von's Books",
+          "address": "315 West State Street, West Lafayette, IN 47906",
+          "lat": 40.4237961,
+          "lon": -86.9086605
+        },
+        {
+          "osm_id": 117396621,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "University Book Store",
+          "address": "360 West State Street, West Lafayette, IN 46906",
+          "lat": 40.424231,
+          "lon": -86.91008840598076
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-RANGE-009",
+    "operation": "range_query",
+    "prompt": "Using Joyful Journeys and Highland West as opposite corners of a rectangle in West Lafayette, IN, which fuel stations are inside it?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "shape": "bbox",
+      "include": {
+        "amenity": "fuel"
+      },
+      "reference_points": [
+        {
+          "osm_id": 869182111,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Joyful Journeys",
+          "address": "600 Lindberg Road, West Lafayette, IN 47906",
+          "lat": 40.446014149999996,
+          "lon": -86.91468636393785
+        },
+        {
+          "osm_id": 743176135,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Highland West",
+          "address": "2491 Sycamore Lane, West Lafayette, IN 47906",
+          "lat": 40.452793,
+          "lon": -86.92337696305718
+        }
+      ],
+      "radius_m": null,
+      "locations": [
+        {
+          "osm_id": 3017021023,
+          "source_table": "osm.planet_osm_point",
+          "name": "GoLo",
+          "address": "Lindberg Road, West Lafayette, IN 47906",
+          "lat": 40.446307,
+          "lon": -86.921483
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-ROUTE-000",
+    "operation": "route",
+    "prompt": "What's the walking distance from Mollenkopf Athletic Facility to Native American Educational and Cultural Center (NACC) in West Lafayette, IN?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location_a": {
+        "osm_id": 8008544236,
+        "source_table": "osm.planet_osm_point",
+        "name": "Mollenkopf Athletic Facility",
+        "address": "1225 Northwestern Avenue, West Lafayette, IN 47907",
+        "lat": 40.4352337,
+        "lon": -86.9165301
+      },
+      "location_b": {
+        "osm_id": 301934125,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Native American Educational and Cultural Center (NACC)",
+        "address": "903 5th Street, West Lafayette, IN 47907",
+        "lat": 40.42911475,
+        "lon": -86.91698690302567
+      },
+      "mode": "foot",
+      "profile": "foot",
+      "distance_type": "network",
+      "distance_m": 796.84,
+      "time_min": 9.56
+    }
+  },
+  {
+    "task_id": "WL-ROUTE-001",
+    "operation": "route",
+    "prompt": "How far is the drive from Crossing At Chauncey Hill to BBQ District in West Lafayette, IN?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location_a": {
+        "osm_id": 886359912,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Crossing At Chauncey Hill",
+        "address": "202 South Chauncey Avenue, West Lafayette, IN 47906",
+        "lat": 40.4215461,
+        "lon": -86.90744311856776
+      },
+      "location_b": {
+        "osm_id": 9418236863,
+        "source_table": "osm.planet_osm_point",
+        "name": "BBQ District",
+        "address": "101 North Grant Street, West Lafayette, IN 47906",
+        "lat": 40.425383,
+        "lon": -86.9113724
+      },
+      "mode": "car",
+      "profile": "car",
+      "distance_type": "network",
+      "distance_m": 847.63,
+      "time_min": 1.64
+    }
+  },
+  {
+    "task_id": "WL-ROUTE-002",
+    "operation": "route",
+    "prompt": "Tell me the walking distance from Caliber Home Loans to Zundo Family Dentistry in West Lafayette, IN.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location_a": {
+        "osm_id": 10817126632,
+        "source_table": "osm.planet_osm_point",
+        "name": "Caliber Home Loans",
+        "address": "500 Sagamore Parkway West, West Lafayette, IN 47906",
+        "lat": 40.4539056,
+        "lon": -86.912735
+      },
+      "location_b": {
+        "osm_id": 887558318,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Zundo Family Dentistry",
+        "address": "1827 Northwestern Avenue, West Lafayette, IN 47906",
+        "lat": 40.4457761,
+        "lon": -86.92196706637823
+      },
+      "mode": "foot",
+      "profile": "foot",
+      "distance_type": "network",
+      "distance_m": 1677.15,
+      "time_min": 20.13
+    }
+  },
+  {
+    "task_id": "WL-ROUTE-003",
+    "operation": "route",
+    "prompt": "How far is it by bike from Duhme (Ophelia) Residence Hall to Purdue Surplus Store in West Lafayette, IN?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location_a": {
+        "osm_id": 936763597,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Duhme (Ophelia) Residence Hall",
+        "address": "209 North Russell Street, West Lafayette, IN 47906",
+        "lat": 40.42559105,
+        "lon": -86.92091823214174
+      },
+      "location_b": {
+        "osm_id": 12173802129,
+        "source_table": "osm.planet_osm_point",
+        "name": "Purdue Surplus Store",
+        "address": "700 Ahlers Drive, West Lafayette, IN 47907",
+        "lat": 40.4154595,
+        "lon": -86.9179452
+      },
+      "mode": "bike",
+      "profile": "bike",
+      "distance_type": "network",
+      "distance_m": 1577.46,
+      "time_min": 5.92
+    }
+  },
+  {
+    "task_id": "WL-ROUTE-004",
+    "operation": "route",
+    "prompt": "By car, what is the distance from Covenant Presbyterian Church to Hillel in West Lafayette, IN?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location_a": {
+        "osm_id": 473799724,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Covenant Presbyterian Church",
+        "address": "211 Knox Drive, West Lafayette, IN 47906",
+        "lat": 40.4486823,
+        "lon": -86.90209147349827
+      },
+      "location_b": {
+        "osm_id": 301838026,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Hillel",
+        "address": "912 West State Street, West Lafayette, IN 47907",
+        "lat": 40.4244063,
+        "lon": -86.91750935
+      },
+      "mode": "car",
+      "profile": "car",
+      "distance_type": "network",
+      "distance_m": 4398.49,
+      "time_min": 6.61
+    }
+  },
+  {
+    "task_id": "WL-ROUTE-005",
+    "operation": "route",
+    "prompt": "How far is the walk from Gilliland Motors to Connection Point Church in West Lafayette, IN?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location_a": {
+        "osm_id": 587553162,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Gilliland Motors",
+        "address": "1098 Sagamore Parkway West, West Lafayette, IN 47906",
+        "lat": 40.4537787,
+        "lon": -86.92192961188346
+      },
+      "location_b": {
+        "osm_id": 319797220,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Connection Point Church",
+        "address": "2541 Cumberland Avenue, Wabash Township, IN 47906",
+        "lat": 40.455579650000004,
+        "lon": -86.94806504190066
+      },
+      "mode": "foot",
+      "profile": "foot",
+      "distance_type": "network",
+      "distance_m": 3063.37,
+      "time_min": 36.76
+    }
+  },
+  {
+    "task_id": "WL-ROUTE-006",
+    "operation": "route",
+    "prompt": "By bike, how far is it from Wabash Valley Education Center to Unitarian Universalist Church of Tippecanoe County in West Lafayette, IN?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location_a": {
+        "osm_id": 859101271,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Wabash Valley Education Center",
+        "address": "3061 Benton Street, West Lafayette, IN 47906",
+        "lat": 40.4622825,
+        "lon": -86.90647072687239
+      },
+      "location_b": {
+        "osm_id": 860918857,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Unitarian Universalist Church of Tippecanoe County",
+        "address": "333 Meridian Street, West Lafayette, IN 47906",
+        "lat": 40.434004,
+        "lon": -86.90901282142858
+      },
+      "mode": "bike",
+      "profile": "bike",
+      "distance_type": "network",
+      "distance_m": 4171.56,
+      "time_min": 14.89
+    }
+  },
+  {
+    "task_id": "WL-ROUTE-007",
+    "operation": "route",
+    "prompt": "Find the driving distance from Wild Bird Shoppe to Pine Manor Apartments in West Lafayette, IN.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location_a": {
+        "osm_id": 4412600932,
+        "source_table": "osm.planet_osm_point",
+        "name": "Wild Bird Shoppe",
+        "address": "1511 West 350 North, West Lafayette, IN 47906",
+        "lat": 40.4676077,
+        "lon": -86.9341004
+      },
+      "location_b": {
+        "osm_id": 781854456,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Pine Manor Apartments",
+        "address": "2637 Yeager Road, West Lafayette, IN 47906",
+        "lat": 40.45221445,
+        "lon": -86.925291225
+      },
+      "mode": "car",
+      "profile": "car",
+      "distance_type": "network",
+      "distance_m": 2780.7,
+      "time_min": 2.86
+    }
+  },
+  {
+    "task_id": "WL-ROUTE-008",
+    "operation": "route",
+    "prompt": "Planning to bike from C-Span Archives to Dos Amigos Mexican Restaurant in West Lafayette, IN - what distance will I cover?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location_a": {
+        "osm_id": 283539043,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "C-Span Archives",
+        "address": "1435 Win Hentschel Boulevard, West Lafayette, IN 47906",
+        "lat": 40.46366685,
+        "lon": -86.933167359153
+      },
+      "location_b": {
+        "osm_id": 9776704352,
+        "source_table": "osm.planet_osm_point",
+        "name": "Dos Amigos Mexican Restaurant",
+        "address": "360 Brown Street, West Lafayette, IN 47906",
+        "lat": 40.4233153,
+        "lon": -86.899411
+      },
+      "mode": "bike",
+      "profile": "bike",
+      "distance_type": "network",
+      "distance_m": 6265.36,
+      "time_min": 21.53
+    }
+  },
+  {
+    "task_id": "WL-ROUTE-009",
+    "operation": "route",
+    "prompt": "I'm driving from Margerum City Hall to Extraspace Storage in West Lafayette, IN. How far is that?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location_a": {
+        "osm_id": 159752237,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Margerum City Hall",
+        "address": "222 North Chauncey Avenue, West Lafayette, IN 47906",
+        "lat": 40.42531685,
+        "lon": -86.90649875231443
+      },
+      "location_b": {
+        "osm_id": 861237941,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Extraspace Storage",
+        "address": "2575 Cumberland Avenue, West Lafayette, IN 47906",
+        "lat": 40.45382725,
+        "lon": -86.95352031043197
+      },
+      "mode": "car",
+      "profile": "car",
+      "distance_type": "network",
+      "distance_m": 6394.92,
+      "time_min": 8.25
+    }
+  },
+  {
+    "task_id": "WL-JOIN-000",
+    "operation": "spatial_join",
+    "prompt": "Which ice cream shops in West Lafayette, IN are within 120 m of a convenience store? List each ice cream shop with every such convenience store.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "join_type": "inner",
+      "set_a": {
+        "include": {
+          "amenity": "ice_cream"
+        },
+        "scope": "city"
+      },
+      "set_b": {
+        "include": {
+          "shop": "convenience"
+        },
+        "scope": "city"
+      },
+      "max_distance_m": 120,
+      "k_per_left": null,
+      "pairs": [
+        {
+          "location_a": {
+            "osm_id": 8023920891,
+            "source_table": "osm.planet_osm_point",
+            "name": "Red Mango",
+            "address": "102 Chauncey Avenue, West Lafayette, IN 47906",
+            "lat": 40.4242501,
+            "lon": -86.9067802
+          },
+          "location_b": {
+            "osm_id": 8023920912,
+            "source_table": "osm.planet_osm_point",
+            "name": "ampm",
+            "address": "208 South Street, West Lafayette, IN 47906",
+            "lat": 40.4240597,
+            "lon": -86.9072516
+          },
+          "geodesic_distance_m": 45.25
+        },
+        {
+          "location_a": {
+            "osm_id": 8023920891,
+            "source_table": "osm.planet_osm_point",
+            "name": "Red Mango",
+            "address": "102 Chauncey Avenue, West Lafayette, IN 47906",
+            "lat": 40.4242501,
+            "lon": -86.9067802
+          },
+          "location_b": {
+            "osm_id": 10163849070,
+            "source_table": "osm.planet_osm_point",
+            "name": "Indian International Store",
+            "address": "208 South Street, West Lafayette, IN 47906",
+            "lat": 40.4240635,
+            "lon": -86.9073501
+          },
+          "geodesic_distance_m": 52.62
+        },
+        {
+          "location_a": {
+            "osm_id": 3554646169,
+            "source_table": "osm.planet_osm_point",
+            "name": "Orange Leaf Frozen Yogurt",
+            "address": "308 West State Street, West Lafayette, IN 47906",
+            "lat": 40.4240567,
+            "lon": -86.9084826
+          },
+          "location_b": {
+            "osm_id": 10163849070,
+            "source_table": "osm.planet_osm_point",
+            "name": "Indian International Store",
+            "address": "208 South Street, West Lafayette, IN 47906",
+            "lat": 40.4240635,
+            "lon": -86.9073501
+          },
+          "geodesic_distance_m": 96.11
+        },
+        {
+          "location_a": {
+            "osm_id": 3554646169,
+            "source_table": "osm.planet_osm_point",
+            "name": "Orange Leaf Frozen Yogurt",
+            "address": "308 West State Street, West Lafayette, IN 47906",
+            "lat": 40.4240567,
+            "lon": -86.9084826
+          },
+          "location_b": {
+            "osm_id": 8023920912,
+            "source_table": "osm.planet_osm_point",
+            "name": "ampm",
+            "address": "208 South Street, West Lafayette, IN 47906",
+            "lat": 40.4240597,
+            "lon": -86.9072516
+          },
+          "geodesic_distance_m": 104.47
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-JOIN-001",
+    "operation": "spatial_join",
+    "prompt": "Find every pair of a car repair shop and a pub in West Lafayette, IN that are at most 200 meters apart.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "join_type": "inner",
+      "set_a": {
+        "include": {
+          "shop": "car_repair"
+        },
+        "scope": "city"
+      },
+      "set_b": {
+        "include": {
+          "amenity": "pub"
+        },
+        "scope": "city"
+      },
+      "max_distance_m": 200,
+      "k_per_left": null,
+      "pairs": [
+        {
+          "location_a": {
+            "osm_id": 544911279,
+            "source_table": "osm.planet_osm_polygon",
+            "name": "Mr. and Mrs. Tire",
+            "address": "1094 Sagamore Parkway West, West Lafayette, IN 47906",
+            "lat": 40.453726450000005,
+            "lon": -86.9207486453499
+          },
+          "location_b": {
+            "osm_id": 544529504,
+            "source_table": "osm.planet_osm_polygon",
+            "name": "Hunter's Pub",
+            "address": "1092 Sagamore Parkway West, West Lafayette, IN 47906",
+            "lat": 40.453770750000004,
+            "lon": -86.92022042492275
+          },
+          "geodesic_distance_m": 45.08
+        },
+        {
+          "location_a": {
+            "osm_id": 587553162,
+            "source_table": "osm.planet_osm_polygon",
+            "name": "Gilliland Motors",
+            "address": "1098 Sagamore Parkway West, West Lafayette, IN 47906",
+            "lat": 40.4537787,
+            "lon": -86.92192961188346
+          },
+          "location_b": {
+            "osm_id": 544529504,
+            "source_table": "osm.planet_osm_polygon",
+            "name": "Hunter's Pub",
+            "address": "1092 Sagamore Parkway West, West Lafayette, IN 47906",
+            "lat": 40.453770750000004,
+            "lon": -86.92022042492275
+          },
+          "geodesic_distance_m": 144.99
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-JOIN-002",
+    "operation": "spatial_join",
+    "prompt": "List the pairs of dentists in West Lafayette, IN that are no more than 300 m from each other.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "join_type": "inner",
+      "set_a": {
+        "include": {
+          "amenity": "dentist"
+        },
+        "scope": "city"
+      },
+      "set_b": {
+        "include": {
+          "amenity": "dentist"
+        },
+        "scope": "city"
+      },
+      "max_distance_m": 300,
+      "k_per_left": null,
+      "pairs": [
+        {
+          "location_a": {
+            "osm_id": 10145452886,
+            "source_table": "osm.planet_osm_point",
+            "name": "Dr. John and Dr. Zach Bozic",
+            "address": "520 West Navajo Street, West Lafayette, IN 47906",
+            "lat": 40.4517076,
+            "lon": -86.9131779
+          },
+          "location_b": {
+            "osm_id": 10145452887,
+            "source_table": "osm.planet_osm_point",
+            "name": "Dr. Donald L. Swoverland",
+            "address": "510 West Navajo Street, West Lafayette, IN 47906",
+            "lat": 40.4517043,
+            "lon": -86.9130534
+          },
+          "geodesic_distance_m": 10.57
+        },
+        {
+          "location_a": {
+            "osm_id": 10145452880,
+            "source_table": "osm.planet_osm_point",
+            "name": "Dr. Guthrie Carr Orthodontist",
+            "address": "257 Sagamore Parkway West, West Lafayette, IN 47906",
+            "lat": 40.4519294,
+            "lon": -86.90992
+          },
+          "location_b": {
+            "osm_id": 10145452887,
+            "source_table": "osm.planet_osm_point",
+            "name": "Dr. Donald L. Swoverland",
+            "address": "510 West Navajo Street, West Lafayette, IN 47906",
+            "lat": 40.4517043,
+            "lon": -86.9130534
+          },
+          "geodesic_distance_m": 266.97
+        },
+        {
+          "location_a": {
+            "osm_id": 10145452880,
+            "source_table": "osm.planet_osm_point",
+            "name": "Dr. Guthrie Carr Orthodontist",
+            "address": "257 Sagamore Parkway West, West Lafayette, IN 47906",
+            "lat": 40.4519294,
+            "lon": -86.90992
+          },
+          "location_b": {
+            "osm_id": 10145452886,
+            "source_table": "osm.planet_osm_point",
+            "name": "Dr. John and Dr. Zach Bozic",
+            "address": "520 West Navajo Street, West Lafayette, IN 47906",
+            "lat": 40.4517076,
+            "lon": -86.9131779
+          },
+          "geodesic_distance_m": 277.46
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-JOIN-003",
+    "operation": "spatial_join",
+    "prompt": "Name the libraries in West Lafayette, IN that have a cafe within 150 m.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "join_type": "semi",
+      "set_a": {
+        "include": {
+          "amenity": "library"
+        },
+        "scope": "city"
+      },
+      "set_b": {
+        "include": {
+          "amenity": "cafe"
+        },
+        "scope": "city"
+      },
+      "max_distance_m": 150,
+      "k_per_left": null,
+      "locations": [
+        {
+          "osm_id": 71497515,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "West Lafayette Public Library",
+          "address": "208 West Columbia Street, West Lafayette, IN 47906",
+          "lat": 40.425111099999995,
+          "lon": -86.90736947573205,
+          "geodesic_distance_m": 76.58
+        },
+        {
+          "osm_id": 158307900,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Hicks Undergraduate Library (HIKS)",
+          "address": "504 West State Street, West Lafayette, IN 47907",
+          "lat": 40.424536450000005,
+          "lon": -86.91265705325289,
+          "geodesic_distance_m": 107.98
+        },
+        {
+          "osm_id": 3056735347,
+          "source_table": "osm.planet_osm_point",
+          "name": "Parrish Library of Management & Economics",
+          "address": "504 State Street, West Lafayette, IN 47907",
+          "lat": 40.4236722,
+          "lon": -86.9107713,
+          "geodesic_distance_m": 122.77
+        },
+        {
+          "osm_id": 3056718617,
+          "source_table": "osm.planet_osm_point",
+          "name": "Humanities, Social Sciences and Education (HSSE) Library",
+          "address": "504 West State Street, West Lafayette, IN 47907",
+          "lat": 40.4250476,
+          "lon": -86.9131065,
+          "geodesic_distance_m": 132.86
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-JOIN-004",
+    "operation": "spatial_join",
+    "prompt": "Which hotels in West Lafayette, IN do not have a bar within 250 m?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "join_type": "anti",
+      "set_a": {
+        "include": {
+          "tourism": "hotel"
+        },
+        "scope": "city"
+      },
+      "set_b": {
+        "include": {
+          "amenity": "bar"
+        },
+        "scope": "city"
+      },
+      "max_distance_m": 250,
+      "k_per_left": null,
+      "locations": [
+        {
+          "osm_id": 283273587,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Hilton Garden Inn",
+          "address": "356 East State Street, West Lafayette, IN 47906",
+          "lat": 40.4206252,
+          "lon": -86.89992260993449
+        },
+        {
+          "osm_id": 555857540,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Hampton Inn & Suites West Lafayette",
+          "address": "160 Tapawingo Drive, West Lafayette, IN 47906",
+          "lat": 40.419685650000005,
+          "lon": -86.9011473826497
+        },
+        {
+          "osm_id": 692636024,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Prestige Inn",
+          "address": "1217 Sagamore Parkway West, West Lafayette, IN 47906",
+          "lat": 40.45292515,
+          "lon": -86.9258257980612
+        },
+        {
+          "osm_id": 71497503,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Four Points by Sheraton",
+          "address": "1600 Cumberland Avenue, West Lafayette, IN 47906",
+          "lat": 40.4599069,
+          "lon": -86.93609691549621
+        },
+        {
+          "osm_id": 1410355674,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Home2 Suites by Hilton West Lafayette",
+          "address": "1710 Sachem Boulevard, West Lafayette, IN 47906",
+          "lat": 40.46195145,
+          "lon": -86.93790281672224
+        },
+        {
+          "osm_id": 1410355207,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "TownePlace Suites West Lafayette",
+          "address": "1750 Sachem Boulevard, West Lafayette, IN 47906",
+          "lat": 40.46154435,
+          "lon": -86.93857424943894
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-JOIN-005",
+    "operation": "spatial_join",
+    "prompt": "For each town hall in West Lafayette, IN, which hair salon is closest?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "join_type": "inner",
+      "set_a": {
+        "include": {
+          "amenity": "townhall"
+        },
+        "scope": "city"
+      },
+      "set_b": {
+        "include": {
+          "shop": "hairdresser"
+        },
+        "scope": "city"
+      },
+      "max_distance_m": null,
+      "k_per_left": 1,
+      "pairs": [
+        {
+          "location_a": {
+            "osm_id": 159752237,
+            "source_table": "osm.planet_osm_polygon",
+            "name": "Margerum City Hall",
+            "address": "222 North Chauncey Avenue, West Lafayette, IN 47906",
+            "lat": 40.42531685,
+            "lon": -86.90649875231443
+          },
+          "location_b": {
+            "osm_id": 8023920904,
+            "source_table": "osm.planet_osm_point",
+            "name": "Eclectic Hair Salon",
+            "address": "115 Chauncey Avenue, West Lafayette, IN 47906",
+            "lat": 40.4244238,
+            "lon": -86.907076
+          },
+          "geodesic_distance_m": 110.61
+        },
+        {
+          "location_a": {
+            "osm_id": 283537870,
+            "source_table": "osm.planet_osm_polygon",
+            "name": "West Lafayette City Building",
+            "address": "1200 North Salisbury Street, West Lafayette, IN 47906",
+            "lat": 40.4373978,
+            "lon": -86.90423208544527
+          },
+          "location_b": {
+            "osm_id": 9525991460,
+            "source_table": "osm.planet_osm_point",
+            "name": "Renu Hair Studio",
+            "address": "Garfield Street, West Lafayette, IN 46906",
+            "lat": 40.4315674,
+            "lon": -86.9129473
+          },
+          "geodesic_distance_m": 982.85
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-JOIN-006",
+    "operation": "spatial_join",
+    "prompt": "For each bookstore in West Lafayette, IN, give the nearest cafe within 100 m, or none if there is no cafe that close.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "join_type": "left",
+      "set_a": {
+        "include": {
+          "shop": "books"
+        },
+        "scope": "city"
+      },
+      "set_b": {
+        "include": {
+          "amenity": "cafe"
+        },
+        "scope": "city"
+      },
+      "max_distance_m": 100,
+      "k_per_left": 1,
+      "pairs": [
+        {
+          "location_a": {
+            "osm_id": 1312604324,
+            "source_table": "osm.planet_osm_point",
+            "name": "Von's Books",
+            "address": "315 West State Street, West Lafayette, IN 47906",
+            "lat": 40.4237961,
+            "lon": -86.9086605
+          },
+          "location_b": {
+            "osm_id": 10163849072,
+            "source_table": "osm.planet_osm_point",
+            "name": "Tsaocaa",
+            "address": "318 West State Street, West Lafayette, IN 47906",
+            "lat": 40.4240876,
+            "lon": -86.908882
+          },
+          "geodesic_distance_m": 37.43
+        },
+        {
+          "location_a": {
+            "osm_id": 117396621,
+            "source_table": "osm.planet_osm_polygon",
+            "name": "University Book Store",
+            "address": "360 West State Street, West Lafayette, IN 46906",
+            "lat": 40.424231,
+            "lon": -86.91008840598076
+          },
+          "location_b": {
+            "osm_id": 12507479705,
+            "source_table": "osm.planet_osm_point",
+            "name": "Leaps Coffee Shop",
+            "address": "201 North Grant Street, West Lafayette, IN 46906",
+            "lat": 40.4247747,
+            "lon": -86.9106629
+          },
+          "geodesic_distance_m": 77.6
+        },
+        {
+          "location_a": {
+            "osm_id": 6260876373,
+            "source_table": "osm.planet_osm_point",
+            "name": "Stadium University Book Store",
+            "address": "720 Northwestern Avenue, West Lafayette, IN 47906",
+            "lat": 40.4328844,
+            "lon": -86.9148941
+          },
+          "location_b": null,
+          "geodesic_distance_m": null
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-JOIN-007",
+    "operation": "spatial_join",
+    "prompt": "Among the libraries within 1000 m of Saturn, West Lafayette, IN, which have no bookstore within 300 m?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "join_type": "anti",
+      "set_a": {
+        "include": {
+          "amenity": "library"
+        },
+        "reference": {
+          "osm_id": 7518501349,
+          "source_table": "osm.planet_osm_point",
+          "name": "Saturn",
+          "address": "610 Purdue Mall, West Lafayette, IN 47907",
+          "lat": 40.4216226,
+          "lon": -86.9229956
+        },
+        "radius_m": 1000
+      },
+      "set_b": {
+        "include": {
+          "shop": "books"
+        },
+        "scope": "city"
+      },
+      "max_distance_m": 300,
+      "k_per_left": null,
+      "locations": [
+        {
+          "osm_id": 3056730281,
+          "source_table": "osm.planet_osm_point",
+          "name": "Mathematical Sciences Library",
+          "address": "105 North University Street, West Lafayette, IN 47907",
+          "lat": 40.4262569,
+          "lon": -86.9157551
+        },
+        {
+          "osm_id": 3056735360,
+          "source_table": "osm.planet_osm_point",
+          "name": "Veterinary Medical Library",
+          "address": "625 Harrison Street, West Lafayette, IN 47907",
+          "lat": 40.419402,
+          "lon": -86.9148787
+        },
+        {
+          "osm_id": 3056735345,
+          "source_table": "osm.planet_osm_point",
+          "name": "Black Cultural Center Library",
+          "address": "1100 3rd Street, West Lafayette, IN 47907",
+          "lat": 40.427493,
+          "lon": -86.9194393
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-JOIN-008",
+    "operation": "spatial_join",
+    "prompt": "Of the 8 parks nearest to Granite Student Living, West Lafayette, IN, which have a fountain within 300 m?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "join_type": "semi",
+      "set_a": {
+        "include": {
+          "leisure": "park"
+        },
+        "reference": {
+          "osm_id": 301838019,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Granite Student Living",
+          "address": "225 Northwestern Avenue, West Lafayette, IN 47906",
+          "lat": 40.425478549999994,
+          "lon": -86.90822695303956
+        },
+        "k": 8
+      },
+      "set_b": {
+        "include": {
+          "amenity": "fountain"
+        },
+        "scope": "city"
+      },
+      "max_distance_m": 300,
+      "k_per_left": null,
+      "locations": [
+        {
+          "osm_id": 663313311,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "De Bedout Plaza",
+          "address": "West Lafayette, IN",
+          "lat": 40.42663225,
+          "lon": -86.91101632837331,
+          "geodesic_distance_m": 14.89
+        },
+        {
+          "osm_id": 158307947,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Purdue Mall",
+          "address": "West Lafayette, IN",
+          "lat": 40.428735599999996,
+          "lon": -86.91364198215265,
+          "geodesic_distance_m": 15.95
+        },
+        {
+          "osm_id": 547113855,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Bell Tower Area",
+          "address": "West Lafayette, IN",
+          "lat": 40.42739875,
+          "lon": -86.91410992214529,
+          "geodesic_distance_m": 36.48
+        },
+        {
+          "osm_id": 74154179,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Memorial Mall",
+          "address": "West Lafayette, IN",
+          "lat": 40.4249217,
+          "lon": -86.91432778121263,
+          "geodesic_distance_m": 50.73
+        },
+        {
+          "osm_id": 1098706602,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Centennial Mall",
+          "address": "West Lafayette, IN",
+          "lat": 40.42741515,
+          "lon": -86.91374238907241,
+          "geodesic_distance_m": 52.13
+        },
+        {
+          "osm_id": 630081195,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Centennial Mall South",
+          "address": "West Lafayette, IN",
+          "lat": 40.42620735,
+          "lon": -86.9137341938983,
+          "geodesic_distance_m": 102.74
+        },
+        {
+          "osm_id": 74154178,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Academy Park",
+          "address": "West Lafayette, IN",
+          "lat": 40.425886399999996,
+          "lon": -86.91233609318795,
+          "geodesic_distance_m": 136.5
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-JOIN-009",
+    "operation": "spatial_join",
+    "prompt": "Show me the bars in West Lafayette, IN with a liquor store less than 300 m away.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "join_type": "semi",
+      "set_a": {
+        "include": {
+          "amenity": "bar"
+        },
+        "scope": "city"
+      },
+      "set_b": {
+        "include": {
+          "shop": "alcohol"
+        },
+        "scope": "city"
+      },
+      "max_distance_m": 300,
+      "k_per_left": null,
+      "locations": [
+        {
+          "osm_id": 10713410711,
+          "source_table": "osm.planet_osm_point",
+          "name": "Neon Cactus",
+          "address": "360 Brown Street, West Lafayette, IN 47906",
+          "lat": 40.4233125,
+          "lon": -86.9004768,
+          "geodesic_distance_m": 109.92
+        },
+        {
+          "osm_id": 10817143333,
+          "source_table": "osm.planet_osm_point",
+          "name": "Brokerage Brewing Co.",
+          "address": "2516 Covington Street, West Lafayette, IN 47906",
+          "lat": 40.4540326,
+          "lon": -86.9141096,
+          "geodesic_distance_m": 253.9
+        },
+        {
+          "osm_id": 3465410707,
+          "source_table": "osm.planet_osm_point",
+          "name": "The Pint",
+          "address": "111 South River Road, West Lafayette, IN 47906",
+          "lat": 40.4219299,
+          "lon": -86.9046949,
+          "geodesic_distance_m": 273.35
+        }
+      ]
+    }
+  }
+]

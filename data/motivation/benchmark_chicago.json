@@ -1,0 +1,382 @@
+[
+  {
+    "task_id": "CHI-FWD-000",
+    "operation": "geocode",
+    "prompt": "I need the lat/long for Dunkin' at 1418 East 53rd Street, Chicago, IL 60615.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 7352046762,
+        "source_table": "osm.planet_osm_point",
+        "name": "Dunkin', Chicago, IL",
+        "address": "1418 East 53rd Street, Chicago, IL 60615",
+        "category": "place",
+        "lat": 41.7999105,
+        "lon": -87.5910693
+      }
+    }
+  },
+  {
+    "task_id": "CHI-FWD-001",
+    "operation": "geocode",
+    "prompt": "Give me the GPS coordinates of Dunkin' at 3206 West 111th Street, Chicago, IL 60655.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 8869206271,
+        "source_table": "osm.planet_osm_point",
+        "name": "Dunkin', Chicago, IL",
+        "address": "3206 West 111th Street, Chicago, IL 60655",
+        "category": "place",
+        "lat": 41.6921187,
+        "lon": -87.7011785
+      }
+    }
+  },
+  {
+    "task_id": "CHI-FWD-002",
+    "operation": "geocode",
+    "prompt": "Give me the GPS coordinates of Bernice's Tavern at 3238 South Halsted Street, Chicago, IL 60608.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 210169914,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Bernice's Tavern, Chicago, IL",
+        "address": "3238 South Halsted Street, Chicago, IL 60608",
+        "category": "place",
+        "lat": 41.8352714,
+        "lon": -87.6464612
+      }
+    }
+  },
+  {
+    "task_id": "CHI-FWD-003",
+    "operation": "geocode",
+    "prompt": "I need the lat/long for Ray's Bucktown Bed & Breakfast at 2144 North Leavitt Street, Chicago, IL 60647.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 209869446,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Ray's Bucktown Bed & Breakfast, Chicago, IL",
+        "address": "2144 North Leavitt Street, Chicago, IL 60647",
+        "category": "place",
+        "lat": 41.9212757,
+        "lon": -87.6828948
+      }
+    }
+  },
+  {
+    "task_id": "CHI-FWD-004",
+    "operation": "geocode",
+    "prompt": "Give me the GPS coordinates of Coach House Theater at 6205 North Sheridan Road, Chicago, IL 60660.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 210395737,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Coach House Theater, Chicago, IL",
+        "address": "6205 North Sheridan Road, Chicago, IL 60660",
+        "category": "place",
+        "lat": 41.9950454,
+        "lon": -87.6548242
+      }
+    }
+  },
+  {
+    "task_id": "CHI-FWD-005",
+    "operation": "geocode",
+    "prompt": "I need the lat/long for Mayfair Academy of Fine Arts at 8701 South Bennett Avenue, Chicago, IL 60617.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 211289124,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Mayfair Academy of Fine Arts, Chicago, IL",
+        "address": "8701 South Bennett Avenue, Chicago, IL 60617",
+        "category": "place",
+        "lat": 41.7368308,
+        "lon": -87.5777573
+      }
+    }
+  },
+  {
+    "task_id": "CHI-FWD-006",
+    "operation": "geocode",
+    "prompt": "Can you give me the coordinates for Rhine VFW Post 2729 at 5858 South Archer Avenue, Chicago, IL 60638?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 162508453,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Rhine VFW Post 2729, Chicago, IL",
+        "address": "5858 South Archer Avenue, Chicago, IL 60638",
+        "category": "place",
+        "lat": 41.7962096,
+        "lon": -87.760954
+      }
+    }
+  },
+  {
+    "task_id": "CHI-FWD-007",
+    "operation": "geocode",
+    "prompt": "Find the coordinates of Chicago Center for Green Technology at 445 North Sacramento Boulevard, Chicago, IL 60612.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 206336182,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Chicago Center for Green Technology, Chicago, IL",
+        "address": "445 North Sacramento Boulevard, Chicago, IL 60612",
+        "category": "place",
+        "lat": 41.8896498,
+        "lon": -87.7008938
+      }
+    }
+  },
+  {
+    "task_id": "CHI-FWD-008",
+    "operation": "geocode",
+    "prompt": "Give me the GPS coordinates of By The Hand Club for Kids at 415 North Laramie Avenue, Chicago, IL 60644.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 401486235,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "By The Hand Club for Kids, Chicago, IL",
+        "address": "415 North Laramie Avenue, Chicago, IL 60644",
+        "category": "place",
+        "lat": 41.8882942,
+        "lon": -87.7550036
+      }
+    }
+  },
+  {
+    "task_id": "CHI-FWD-009",
+    "operation": "geocode",
+    "prompt": "Find the coordinates of Chicago Theatre at 175 North State Street, Chicago, IL 60601.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 124873919,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Chicago Theatre, Chicago, IL",
+        "address": "175 North State Street, Chicago, IL 60601",
+        "category": "place",
+        "lat": 41.8854968,
+        "lon": -87.6271883
+      }
+    }
+  },
+  {
+    "task_id": "CHI-REV-000",
+    "operation": "geocode_reverse",
+    "prompt": "Identify what is found at latitude 41.7999105, longitude -87.5910693.",
+    "target_lat": 41.7999105,
+    "target_lon": -87.5910693,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 7352046762,
+        "source_table": "osm.planet_osm_point",
+        "name": "Dunkin', Chicago, IL",
+        "address": "1418 East 53rd Street, Chicago, IL 60615",
+        "category": "place",
+        "lat": 41.7999105,
+        "lon": -87.5910693
+      }
+    }
+  },
+  {
+    "task_id": "CHI-REV-001",
+    "operation": "geocode_reverse",
+    "prompt": "Given lon=-87.7011785 and lat=41.6921187, what is at this location?",
+    "target_lat": 41.6921187,
+    "target_lon": -87.7011785,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 8869206271,
+        "source_table": "osm.planet_osm_point",
+        "name": "Dunkin', Chicago, IL",
+        "address": "3206 West 111th Street, Chicago, IL 60655",
+        "category": "place",
+        "lat": 41.6921187,
+        "lon": -87.7011785
+      }
+    }
+  },
+  {
+    "task_id": "CHI-REV-002",
+    "operation": "geocode_reverse",
+    "prompt": "What place or address corresponds to lon=-87.6464612, lat=41.8352714?",
+    "target_lat": 41.8352714,
+    "target_lon": -87.6464612,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 210169914,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Bernice's Tavern, Chicago, IL",
+        "address": "3238 South Halsted Street, Chicago, IL 60608",
+        "category": "place",
+        "lat": 41.8352714,
+        "lon": -87.6464612
+      }
+    }
+  },
+  {
+    "task_id": "CHI-REV-003",
+    "operation": "geocode_reverse",
+    "prompt": "What place or address corresponds to lon=-87.6828948, lat=41.9212757?",
+    "target_lat": 41.9212757,
+    "target_lon": -87.6828948,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 209869446,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Ray's Bucktown Bed & Breakfast, Chicago, IL",
+        "address": "2144 North Leavitt Street, Chicago, IL 60647",
+        "category": "place",
+        "lat": 41.9212757,
+        "lon": -87.6828948
+      }
+    }
+  },
+  {
+    "task_id": "CHI-REV-004",
+    "operation": "geocode_reverse",
+    "prompt": "What's at coordinates (long: -87.6548242, lat: 41.9950454)?",
+    "target_lat": 41.9950454,
+    "target_lon": -87.6548242,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 210395737,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Coach House Theater, Chicago, IL",
+        "address": "6205 North Sheridan Road, Chicago, IL 60660",
+        "category": "place",
+        "lat": 41.9950454,
+        "lon": -87.6548242
+      }
+    }
+  },
+  {
+    "task_id": "CHI-REV-005",
+    "operation": "geocode_reverse",
+    "prompt": "Given long=-87.5777573 and lat=41.7368308, what is at this location?",
+    "target_lat": 41.7368308,
+    "target_lon": -87.5777573,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 211289124,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Mayfair Academy of Fine Arts, Chicago, IL",
+        "address": "8701 South Bennett Avenue, Chicago, IL 60617",
+        "category": "place",
+        "lat": 41.7368308,
+        "lon": -87.5777573
+      }
+    }
+  },
+  {
+    "task_id": "CHI-REV-006",
+    "operation": "geocode_reverse",
+    "prompt": "What place or address corresponds to latitude=41.7962096 and longitude=-87.760954?",
+    "target_lat": 41.7962096,
+    "target_lon": -87.760954,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 162508453,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Rhine VFW Post 2729, Chicago, IL",
+        "address": "5858 South Archer Avenue, Chicago, IL 60638",
+        "category": "place",
+        "lat": 41.7962096,
+        "lon": -87.760954
+      }
+    }
+  },
+  {
+    "task_id": "CHI-REV-007",
+    "operation": "geocode_reverse",
+    "prompt": "What place or address corresponds to lon=-87.7008938, lat=41.8896498?",
+    "target_lat": 41.8896498,
+    "target_lon": -87.7008938,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 206336182,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Chicago Center for Green Technology, Chicago, IL",
+        "address": "445 North Sacramento Boulevard, Chicago, IL 60612",
+        "category": "place",
+        "lat": 41.8896498,
+        "lon": -87.7008938
+      }
+    }
+  },
+  {
+    "task_id": "CHI-REV-008",
+    "operation": "geocode_reverse",
+    "prompt": "Given lon=-87.7550036 and lat=41.8882942, what is at this location?",
+    "target_lat": 41.8882942,
+    "target_lon": -87.7550036,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 401486235,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "By The Hand Club for Kids, Chicago, IL",
+        "address": "415 North Laramie Avenue, Chicago, IL 60644",
+        "category": "place",
+        "lat": 41.8882942,
+        "lon": -87.7550036
+      }
+    }
+  },
+  {
+    "task_id": "CHI-REV-009",
+    "operation": "geocode_reverse",
+    "prompt": "Tell me what's at lon=-87.6271883, lat=41.8854968.",
+    "target_lat": 41.8854968,
+    "target_lon": -87.6271883,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 124873919,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Chicago Theatre, Chicago, IL",
+        "address": "175 North State Street, Chicago, IL 60601",
+        "category": "place",
+        "lat": 41.8854968,
+        "lon": -87.6271883
+      }
+    }
+  }
+]

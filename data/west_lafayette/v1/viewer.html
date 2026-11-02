@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spatial Benchmark Viewer</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css">
+<script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+<style>
+:root {
+  color-scheme: light dark;
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px;
+  --t1: 12px; --t2: 13px; --t3: 14px; --t4: 16px; --t5: 20px;
+  --r: 6px;
+  --bg: #ffffff; --bg2: #f6f8fa; --border: #d8dee4; --text: #1f2328; --muted: #656d76; --accent: #0969da;
+  /* map palette: blue = input side, green = output side, grey = context; identical in both themes (OSM tiles stay light) */
+  --blue: #1f6feb; --green: #1a9f3c; --grey: #6e7781; --path: #3b4554;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0d1117; --bg2: #161b22; --border: #30363d; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; }
+}
+.ref, .a, .area, .nomatch { --c: var(--blue); } .dest, .b, .answer { --c: var(--green); }
+.ray { --c: var(--grey); } .path { --c: var(--path); }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font: var(--t2)/1.5 system-ui, sans-serif; height: 100vh; display: flex; flex-direction: column; background: var(--bg); color: var(--text); }
+button, select { font: inherit; font-size: var(--t1); color: inherit; background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r); padding: var(--s1) var(--s2); cursor: pointer; }
+button:hover:not(:disabled), select:hover { border-color: var(--muted); }
+button:disabled { opacity: .4; cursor: default; }
+small, code { font-size: var(--t1); color: var(--muted); }
+code { display: block; font-family: ui-monospace, monospace; }
+code span { white-space: nowrap; }
+
+#topbar { display: flex; align-items: center; gap: var(--s2); flex-wrap: wrap; padding: var(--s2) var(--s3); background: var(--bg2); border-bottom: 1px solid var(--border); }
+#topbar h1 { font-size: var(--t2); margin-right: var(--s2); }
+#src { font-size: var(--t1); color: var(--muted); }
+#main { flex: 1; display: flex; min-height: 0; }
+#mapwrap { flex: 1; position: relative; min-width: 0; }
+#map { position: absolute; inset: 0; }
+#msg { position: absolute; inset: 0; z-index: 1000; display: none; place-content: center; padding: var(--s5); background: color-mix(in srgb, var(--bg) 92%, transparent); }
+#msg > div { max-width: 560px; }
+#msg pre { margin: var(--s2) 0; padding: var(--s2); background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r); font: var(--t1) ui-monospace, monospace; white-space: pre-wrap; }
+
+#panel { width: 420px; overflow-y: auto; border-left: 1px solid var(--border); padding: 0 var(--s4) var(--s5); display: flex; flex-direction: column; gap: var(--s4); }
+#head { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; gap: var(--s2); padding: var(--s3) 0; background: var(--bg); border-bottom: 1px solid var(--border); }
+#tid { font-size: var(--t4); }
+.badge { padding: 0 var(--s2); border-radius: 10px; background: var(--accent); color: #fff; font-size: var(--t1); }
+#head .nav { margin-left: auto; display: flex; align-items: center; gap: var(--s2); }
+#pos { min-width: 56px; text-align: center; font-size: var(--t1); color: var(--muted); font-variant-numeric: tabular-nums; }
+.card { --c: var(--accent); padding: var(--s3) var(--s4); background: var(--bg2); border: 1px solid var(--border); border-left: 3px solid var(--c); border-radius: var(--r); }
+.card.answer { --c: var(--green); }
+#prompt { font-size: var(--t4); line-height: 1.5; max-width: 65ch; }
+
+#detail { display: flex; flex-direction: column; gap: var(--s4); }
+#detail .sec + .sec { border-top: 1px solid var(--border); padding-top: var(--s4); }
+h3 { font-size: var(--t1); font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin-bottom: var(--s2); }
+dl.kv { display: grid; grid-template-columns: auto 1fr; gap: var(--s1) var(--s4); }
+dl.kv dt { color: var(--muted); }
+dl.kv dd > div + div { margin-top: var(--s1); }
+.key { font-size: var(--t5); font-weight: 600; line-height: 1.3; font-variant-numeric: tabular-nums; }
+.sub { margin-top: var(--s1); font-size: var(--t1); color: var(--muted); }
+ul.list { list-style: none; margin-top: var(--s3); display: flex; flex-direction: column; }
+.list li { display: grid; grid-template-columns: 20px 1fr auto; gap: var(--s2); padding: var(--s1) var(--s2); margin: 0 calc(var(--s2) * -1); border-radius: var(--r); cursor: pointer; }
+.list li:hover, .list li.hl { background: color-mix(in srgb, var(--muted) 14%, transparent); }
+.list li.muted { color: var(--muted); }
+.list .lead { color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+.list .main { min-width: 0; display: flex; flex-direction: column; }
+.list b { font-weight: 600; }
+.list li.muted b { font-weight: 400; }
+.list small { overflow-wrap: anywhere; }
+.list .meta { text-align: right; white-space: nowrap; color: var(--muted); font-variant-numeric: tabular-nums; }
+.bad { font-weight: 600; }
+
+#legend { display: flex; flex-wrap: wrap; gap: var(--s1) var(--s3); padding-top: var(--s3); border-top: 1px solid var(--border); font-size: var(--t1); color: var(--muted); }
+#legend:empty { display: none; }
+#legend div { display: flex; align-items: center; gap: var(--s1); }
+#legend i { width: 12px; height: 12px; border-radius: 50%; background: var(--c); border: 1.5px solid #fff; box-shadow: 0 0 0 1px #0004; }
+#legend i.nomatch { outline: 1.5px dashed var(--grey); outline-offset: 1.5px; margin: 1.5px; }
+#legend i.path { width: 16px; height: 3px; border: 0; border-radius: 0; box-shadow: none; }
+#legend i.ray { width: 16px; height: 0; border: 0; border-top: 2px dashed var(--c); border-radius: 0; background: none; box-shadow: none; }
+#legend i.area { border: 1.5px solid var(--c); border-radius: 2px; background: color-mix(in srgb, var(--c) 18%, transparent); box-shadow: none; }
+
+#details { padding-top: var(--s3); border-top: 1px solid var(--border); }
+#details summary { cursor: pointer; font-size: var(--t1); color: var(--muted); }
+.code { position: relative; margin-top: var(--s2); }
+#details pre { padding: var(--s2) var(--s5) var(--s2) var(--s2); background: var(--bg2); border-radius: var(--r); font: var(--t1) ui-monospace, monospace; white-space: pre-wrap; overflow-wrap: anywhere; }
+#copy { position: absolute; top: var(--s1); right: var(--s1); width: 28px; height: 28px; padding: 0; display: grid; place-items: center; opacity: 0; }
+.code:hover #copy, #copy:focus-visible { opacity: 1; }
+@media (hover: none) { #copy { opacity: 1; } }
+
+.mk { width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; font: 600 var(--t1) system-ui; color: #fff; background: var(--c); border: 2px solid #fff; box-shadow: 0 1px 4px #0007; }
+.mk.nomatch { outline: 2px dashed var(--grey); outline-offset: 2px; }
+.leaflet-routing-container { display: none; }
+.ah { width: 0; height: 0; margin: 0 auto; border: 8px solid transparent; border-bottom: 14px solid var(--grey); border-top: 0; }
+.leaflet-tooltip.lbl { font: 600 var(--t1) system-ui; padding: 1px 6px; }
+
+@media (max-width: 800px) {
+  #main { flex-direction: column; }
+  #panel { width: auto; height: 50%; border-left: 0; border-top: 1px solid var(--border); }
+}
+</style>
+</head>
+<body>
+<div id="topbar">
+  <h1>Spatial Benchmark Viewer</h1>
+  <select id="file" title="Task file">
+    <option>benchmark_tasks.json</option>
+    <option>geocode.json</option><option>geocode_with_addr.json</option><option>geocode_reverse.json</option>
+    <option>directionality.json</option><option>directionality_with_addr.json</option>
+    <option>directionality_with_coords.json</option><option>directionality_mixed_coords.json</option>
+    <option>route.json</option><option>route_time.json</option><option>knn.json</option>
+    <option>range_query.json</option><option>spatial_join.json</option>
+  </select>
+  <button id="open">Open...</button>
+  <input id="picker" type="file" accept=".json,application/json" hidden>
+  <select id="op" title="Filter by operation"></select>
+  <span id="src"></span>
+</div>
+<div id="main">
+  <div id="mapwrap"><div id="map"></div><div id="msg"><div id="msgbody"></div></div></div>
+  <aside id="panel">
+    <header id="head">
+      <b id="tid"></b><span class="badge" id="badge"></span>
+      <span class="nav"><button id="prev">&larr;</button><span id="pos"></span><button id="next">&rarr;</button></span>
+    </header>
+    <p id="prompt" class="card"></p>
+    <div id="detail"></div>
+    <div id="legend"></div>
+    <details id="details"><summary>Raw answer</summary><div class="code"><pre id="raw"></pre><button id="copy" aria-label="Copy"></button></div></details>
+  </aside>
+</div>
+
+<script>
+// One vocabulary for roles: legend, map labels and panel text all read from here.
+const ROLE_NAMES = {
+  default: { ref: 'Reference', dest: 'Destination', answer: 'Answer', a: 'Set A', b: 'Set B', nomatch: 'No match', area: 'Search area', path: 'Route path', ray: 'Link' },
+  geocode: { ref: 'Result' },
+  geocode_reverse: { ref: 'Input point' },
+  directionality: { ref: 'Origin', ray: 'Direction' },
+  route: { ref: 'Origin' },
+  route_time: { ref: 'Origin' },
+};
+const LEGEND_ORDER = ['ref', 'dest', 'answer', 'a', 'b', 'nomatch', 'area', 'path', 'ray'];
+const roleNames = op => ({ ...ROLE_NAMES.default, ...ROLE_NAMES[op] });
+const LABELLED = new Set(['ref', 'dest', 'nomatch']);
+
+const JOIN_TYPES = {
+  inner: 'inner (every pair within range)',
+  left: 'left (each A with its nearest B, or none)',
+  semi: 'semi (A places with a match)',
+  anti: 'anti (A places without a match)',
+};
+const svg = d => `<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
+const ICON_COPY = svg('<rect x="5.5" y="5.5" width="8" height="8" rx="1.5"/><path d="M10.5 5.5v-2a1.5 1.5 0 0 0-1.5-1.5h-5A1.5 1.5 0 0 0 2.5 3.5v5A1.5 1.5 0 0 0 4 10h1.5"/>');
+const ICON_DONE = svg('<path d="M3 8.5l3.5 3.5L13 4.5"/>');
+const PATH_NOTE = 'Map path: public OSRM via Leaflet Routing Machine, for illustration only.';
+
+// ---- helpers ----
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const num = (n, d = 2) => (n == null ? '-' : Number(n).toLocaleString('en-US', { maximumFractionDigits: d }));
+const tag = inc => Object.entries(inc).map(([k, v]) => `${k}=${v}`).join(', ');
+const ll = p => [p.lat, p.lon];
+const kv = rows => `<dl class="kv">${rows.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${v}</dd>`).join('')}</dl>`;
+const section = (title, body) => `<div class="sec"><h3>${esc(title)}</h3>${body}</div>`;
+const answer = body => section('Answer', `<div class="card answer">${body}</div>`);
+const rows = items => `<ul class="list">${items.join('')}</ul>`;
+// Entity id as the database and tools use it, e.g. point:11515586281 (none for the synthetic input point).
+const entityId = p => (p.osm_id ? `${p.source_table.replace('osm.planet_osm_', '')}:${p.osm_id}` : '');
+const key = p => entityId(p) || 'input';
+const coords = (lat, lon) => `${Number(lat).toFixed(6)}, ${Number(lon).toFixed(6)}`;
+const idLine = p => `<code>${[entityId(p), coords(p.lat, p.lon)].filter(Boolean).map(x => `<span>${esc(x)}</span>`).join(' \u00b7 ')}</code>`;
+const placeHtml = p => `<div><b>${esc(p.name)}</b>${idLine(p)}</div>`;
+const row = (p, { lead = '', title = esc(p.name), meta = '', ids = idLine(p), address = p.address, muted = false } = {}) =>
+  `<li data-key="${esc(key(p))}"${muted ? ' class="muted"' : ''}><span class="lead">${lead}</span>` +
+  `<div class="main"><b>${title}</b>${ids}${address ? `<small>${esc(address)}</small>` : ''}</div><span class="meta">${meta}</span></li>`;
+// Compass direction and bearing, origin (location_b) to destination (location_a).
+const heading = a => `${a.direction} (${num(a.bearing_deg, 1)}°)`;
+const count = (n, noun = 'results') => `<div class="key">${n} ${noun}</div>`;
+
+function haversine_m(a, b) {
+  const r = Math.PI / 180, h = Math.sin((b.lat - a.lat) * r / 2) ** 2 +
+    Math.cos(a.lat * r) * Math.cos(b.lat * r) * Math.sin((b.lon - a.lon) * r / 2) ** 2;
+  return 12742000 * Math.asin(Math.sqrt(h));
+}
+
+// Markers deduplicated by place; the first role registered for a place wins.
+function markerSet() {
+  const m = new Map();
+  return {
+    put(p, role, extra = {}) { if (!m.has(key(p))) m.set(key(p), { p, role, ...extra }); },
+    list: () => [...m.values()],
+  };
+}
+
+// ---- per-operation scene (map layers) and detail (panel sections) ----
+const OPERATIONS = {
+  geocode: {
+    label: 'Geocode',
+    scene: a => ({ markers: [{ p: a.location, role: 'ref' }] }),
+    detail: a => answer(`<div class="key">${coords(a.location.lat, a.location.lon)}</div>` +
+      `<div class="sub">latitude, longitude</div>` + rows([row(a.location, { lead: '\u2022' })])),
+  },
+
+  geocode_reverse: {
+    label: 'Reverse geocode',
+    scene: (a, t) => {
+      const input = { name: coords(t.target_lat, t.target_lon), lat: t.target_lat, lon: t.target_lon };
+      return { markers: [{ p: input, role: 'ref' }, { p: a.location, role: 'answer' }], lines: [{ from: input, to: a.location }] };
+    },
+    detail: (a, t, N) => section('Query', kv([[N.ref, `<code>${coords(t.target_lat, t.target_lon)}</code>`]])) +
+      answer(`<div class="key">${esc(a.location.name)}</div>${idLine(a.location)}<div class="sub">${esc(a.location.address)}</div>` +
+        `<div class="sub">${num(haversine_m({ lat: t.target_lat, lon: t.target_lon }, a.location), 1)} m from the ${N.ref.toLowerCase()}</div>`),
+  },
+
+  directionality: {
+    label: 'Directionality',
+    scene: a => ({
+      markers: [{ p: a.location_b, role: 'ref' }, { p: a.location_a, role: 'dest' }],
+      lines: [{ from: a.location_b, to: a.location_a, arrow: true, label: heading(a) }],
+    }),
+    detail: (a, t, N) => section('Query', kv([[N.ref, placeHtml(a.location_b)], [N.dest, placeHtml(a.location_a)]])) +
+      answer(`<div class="key">${esc(heading(a))}</div><div class="sub">compass direction (bearing clockwise from north)</div>`),
+  },
+
+  route: routeOperation('Route'),
+  route_time: routeOperation('Route (travel time)'),
+
+  knn: {
+    label: 'KNN search',
+    scene: a => {
+      const net = a.distance_type === 'network';
+      return {
+        markers: [{ p: a.reference, role: 'ref' },
+          ...a.locations.map((p, i) => ({ p, role: 'answer', text: i + 1, extra: `${num(p.distance_m)} m` }))],
+        lines: net ? [] : a.locations.map(p => ({ from: a.reference, to: p })),
+        paths: net ? a.locations.map(p => ({ from: a.reference, to: p, mode: a.mode, dashed: true })) : [],
+      };
+    },
+    detail: (a, t, N) => {
+      const net = a.distance_type === 'network';
+      return section('Query', kv([[N.ref, placeHtml(a.reference)], ['Filter', esc(tag(a.include))], ['k', a.k],
+        ['Distance', net ? `network (${esc(a.mode)})` : 'straight-line']])) +
+        answer(count(a.locations.length) + (net ? `<div class="sub">${PATH_NOTE}</div>` : '') + rows(a.locations.map((p, i) =>
+          row(p, { lead: i + 1, meta: `${num(p.distance_m)} m${net ? ` | ${num(p.time_min)} min` : ''}` }))));
+    },
+  },
+
+  range_query: {
+    label: 'Range search',
+    scene: a => ({
+      markers: [...a.reference_points.map(p => ({ p, role: 'ref' })), ...a.locations.map(p => ({ p, role: 'answer' }))],
+      lines: a.shape === 'circle' ? a.locations.map(p => ({ from: a.reference_points[0], to: p })) : [],
+      shapes: [a.shape === 'circle' ? { type: 'circle', p: a.reference_points[0], r: a.radius_m }
+        : { type: 'rect', a: a.reference_points[0], b: a.reference_points[1] }],
+    }),
+    detail: (a, t, N) => section('Query', kv([
+      [N.ref, a.reference_points.map(placeHtml).join('')],
+      ['Filter', esc(tag(a.include))],
+      a.shape === 'circle' ? ['Radius', `${num(a.radius_m)} m`] : ['Box', 'spanned by the two references']])) +
+      answer(count(a.locations.length) + rows(a.locations.map(p => row(p, { lead: '•' })))),
+  },
+
+  spatial_join: {
+    label: 'Spatial join',
+    scene: joinScene,
+    detail: joinDetail,
+  },
+};
+
+function routeOperation(label) {
+  return {
+    label,
+    scene: a => ({
+      markers: [{ p: a.location_a, role: 'ref' }, { p: a.location_b, role: 'dest' }],
+      paths: [{ from: a.location_a, to: a.location_b, mode: a.mode }],
+    }),
+    detail: (a, t, N) => section('Query', kv([[N.ref, placeHtml(a.location_a)], [N.dest, placeHtml(a.location_b)], ['Mode', esc(a.mode)]])) +
+      answer(`<div class="key">${num(a.distance_m)} m | ${num(a.time_min)} min</div><div class="sub">${PATH_NOTE}</div>`),
+  };
+}
+
+function setText(s) {
+  const where = !s.reference ? (s.scope === 'city' ? 'whole city' : esc(s.scope))
+    : s.radius_m != null ? `within ${num(s.radius_m)} m of ${esc(s.reference.name)}` : `${s.k} nearest to ${esc(s.reference.name)}`;
+  return `${esc(tag(s.include))} | ${where}`;
+}
+
+function joinScene(a) {
+  const ms = markerSet(), lines = [], shapes = [];
+  const pairs = a.pairs ?? [];
+  pairs.forEach(q => ms.put(q.location_a, q.location_b ? 'a' : 'nomatch'));
+  pairs.forEach(q => q.location_b && ms.put(q.location_b, 'b'));
+  pairs.forEach(q => q.location_b && lines.push({ from: q.location_a, to: q.location_b, tip: `${num(q.geodesic_distance_m)} m` }));
+  (a.locations ?? []).forEach(p => ms.put(p, 'answer', { extra: p.nearest_match_m != null ? `nearest match ${num(p.nearest_match_m)} m` : '' }));
+  for (const s of [a.set_a, a.set_b]) {
+    if (!s.reference) continue;
+    ms.put(s.reference, 'ref');
+    if (s.radius_m != null) shapes.push({ type: 'circle', p: s.reference, r: s.radius_m });
+  }
+  return { markers: ms.list(), lines, shapes };
+}
+
+function joinDetail(a) {
+  const query = section('Query', kv([['Join type', esc(JOIN_TYPES[a.join_type] ?? a.join_type)], ['Set A', setText(a.set_a)], ['Set B', setText(a.set_b)],
+    ...(a.max_distance_m == null ? [] : [['Max distance', `${num(a.max_distance_m)} m`]]), ...(a.k_per_left == null ? [] : [['k per left', a.k_per_left]])]));
+  if (a.pairs) {
+    return query + answer(count(a.pairs.length, 'pairs') + rows(a.pairs.map(q => q.location_b
+      ? row(q.location_a, { lead: '•', title: `${esc(q.location_a.name)} &rarr; ${esc(q.location_b.name)}`, ids: idLine(q.location_a) + idLine(q.location_b), address: '', meta: `${num(q.geodesic_distance_m)} m` })
+      : row(q.location_a, { lead: '•', title: `${esc(q.location_a.name)} &rarr; no match`, address: '', muted: true }))));
+  }
+  return query + answer(count(a.locations.length, 'places') + rows(a.locations.map(p =>
+    row(p, { lead: '•', meta: p.nearest_match_m != null ? `${num(p.nearest_match_m)} m` : '' }))));
+}
+
+// ---- state and rendering ----
+let tasks = [], view = [], idx = 0;
+const markers = new Map();
+const $ = id => document.getElementById(id);
+const map = L.map('map', { zoomSnap: 0.25 });
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+L.control.scale({ imperial: false }).addTo(map);
+const layer = L.layerGroup().addTo(map);
+new ResizeObserver(() => map.invalidateSize()).observe($('map')); // keep tiles in step with panel/window resizes
+const css = name => getComputedStyle(document.documentElement).getPropertyValue(`--${name}`).trim();
+const routers = {};
+const router = mode => routers[mode] ??= L.Routing.osrmv1({ serviceUrl: `https://routing.openstreetmap.de/routed-${mode}/route/v1`, profile: 'driving' });
+const fetchPath = (from, to, mode) => new Promise(res => router(mode).route(
+  [L.Routing.waypoint(ll(from)), L.Routing.waypoint(ll(to))], (err, routes) => res(err ? null : routes[0].coordinates)));
+
+function markerIcon(m) {
+  return L.divIcon({ className: '', iconSize: [24, 24], iconAnchor: [12, 12],
+    html: `<div class="mk ${m.role}">${esc(m.text ?? '')}</div>` });
+}
+
+function mercatorBearing(a, b) {
+  const pa = L.CRS.EPSG3857.project(L.latLng(a)), pb = L.CRS.EPSG3857.project(L.latLng(b));
+  return Math.atan2(pb.x - pa.x, pb.y - pa.y) * 180 / Math.PI;
+}
+
+// Dashed grey link from a reference to a place; optional arrowhead near the far end and a permanent label.
+function dashedLink({ from, to, arrow, label, tip }) {
+  const line = L.polyline([ll(from), ll(to)], { color: css('grey'), weight: 2, dashArray: '5 6' }).addTo(layer);
+  if (tip) line.bindTooltip(esc(tip), { sticky: true });
+  if (label) line.bindTooltip(esc(label), { permanent: true, direction: 'top', offset: [0, -4], className: 'lbl' });
+  if (arrow) {
+    const at = [from.lat + (to.lat - from.lat) * .8, from.lon + (to.lon - from.lon) * .8];
+    const icon = L.divIcon({ className: '', iconSize: [16, 14], iconAnchor: [8, 7],
+      html: `<div class="ah" style="transform:rotate(${mercatorBearing(from, to)}deg)"></div>` });
+    L.marker(at, { icon, interactive: false }).addTo(layer);
+  }
+  return line;
+}
+
+const markerRow = k => $('detail').querySelector(`[data-key="${CSS.escape(k)}"]`);
+
+// Draws the scene and returns the set of roles in use (for the legend).
+let curBounds, drawn = 0;
+function draw(s, N) {
+  drawn++;
+  layer.clearLayers();
+  markers.clear();
+  const bounds = L.latLngBounds([]);
+  const add = l => { l.addTo(layer); bounds.extend(l.getBounds ? l.getBounds() : l.getLatLng()); return l; };
+  const used = new Set();
+  const area = { color: css('blue'), weight: 2, fillOpacity: .12 };
+
+  for (const sh of s.shapes ?? []) {
+    add(sh.type === 'circle' ? L.circle(ll(sh.p), { radius: sh.r, ...area }) : L.rectangle([ll(sh.a), ll(sh.b)], area));
+    used.add('area');
+  }
+  for (const l of s.lines ?? []) {
+    dashedLink(l);
+    used.add('ray');
+  }
+  if (s.paths?.length) used.add(s.paths[0].dashed ? 'ray' : 'path');
+  for (const m of s.markers ?? []) {
+    const mk = add(L.marker(ll(m.p), { icon: markerIcon(m) }));
+    const text = LABELLED.has(m.role) ? `${N[m.role]}: ${m.p.name}` : [m.p.name, m.extra].filter(Boolean).join(' | ');
+    mk.bindPopup(`<b>${esc(m.p.name)}</b>${m.p.osm_id ? idLine(m.p) : ''}${esc(m.p.address ?? '')}`);
+    mk.bindTooltip(esc(text), { permanent: LABELLED.has(m.role), direction: 'top', offset: [0, -12], className: 'lbl' });
+    const k = key(m.p), toggle = e => {
+      const r = markerRow(k);
+      r?.classList.toggle('hl', e.type === 'mouseover');
+      if (e.type === 'mouseover') r?.scrollIntoView({ block: 'nearest' });
+    };
+    mk.on('mouseover mouseout', toggle);
+    markers.set(k, mk);
+    used.add(m.role);
+  }
+  if (bounds.isValid()) fitAll(bounds);
+  curBounds = bounds;
+  return used;
+}
+
+// Zoom and centre on everything drawn: shapes plus marker and label boxes, with `pad` px around.
+function fitAll(bounds, pad = 28) {
+  const box = map.getContainer(), snap = map.options.zoomSnap;
+  const extent = () => {
+    const c = box.getBoundingClientRect();
+    const sw = map.latLngToContainerPoint(bounds.getSouthWest()), ne = map.latLngToContainerPoint(bounds.getNorthEast());
+    const e = { x0: Math.min(sw.x, ne.x), x1: Math.max(sw.x, ne.x), y0: Math.min(sw.y, ne.y), y1: Math.max(sw.y, ne.y), w: c.width, h: c.height };
+    layer.eachLayer(l => {
+      for (const el of [l instanceof L.Marker && l.getElement(), l.getTooltip?.()?.isOpen() && l.getTooltip().getElement()]) {
+        if (!el) continue;
+        const r = el.getBoundingClientRect();
+        e.x0 = Math.min(e.x0, r.left - c.left); e.x1 = Math.max(e.x1, r.right - c.left);
+        e.y0 = Math.min(e.y0, r.top - c.top); e.y1 = Math.max(e.y1, r.bottom - c.top);
+      }
+    });
+    return e;
+  };
+  map.fitBounds(bounds, { padding: [pad, pad], maxZoom: 17, animate: false });
+  for (let i = 0; i < 12; i++) {
+    const e = extent(), scale = Math.min((e.w - 2 * pad) / Math.max(e.x1 - e.x0, 1), (e.h - 2 * pad) / Math.max(e.y1 - e.y0, 1));
+    const zoom = Math.min(17, Math.floor((map.getZoom() + Math.log2(scale)) / snap) * snap);
+    if (zoom === map.getZoom()) break;
+    map.setView(map.containerPointToLatLng([(e.x0 + e.x1) / 2, (e.y0 + e.y1) / 2]), zoom, { animate: false });
+  }
+  for (let i = 0; i < 3; i++) {
+    const e = extent();
+    map.panBy([(e.x0 + e.x1) / 2 - e.w / 2, (e.y0 + e.y1) / 2 - e.h / 2], { animate: false });
+  }
+}
+
+// Road paths load asynchronously; each is dashed grey like the straight links, or solid for a route task.
+async function drawPaths(paths, id) {
+  if (!paths.length) return;
+  const got = await Promise.all(paths.map(p => fetchPath(p.from, p.to, p.mode ?? 'car')));
+  if (id !== drawn) return;
+  const b = L.latLngBounds(curBounds.getSouthWest(), curBounds.getNorthEast());
+  got.forEach((c, i) => {
+    if (!c) return;
+    const line = L.polyline(c, paths[i].dashed ? { color: css('grey'), weight: 2, dashArray: '5 6' } : { color: css('path'), weight: 5, opacity: .9 }).addTo(layer).bringToBack();
+    b.extend(line.getBounds());
+  });
+  if (!b.equals(curBounds)) fitAll(b);
+}
+
+function show(i) {
+  idx = i;
+  const t = view[idx], op = OPERATIONS[t.operation], N = roleNames(t.operation);
+  $('prev').disabled = idx === 0;
+  $('next').disabled = idx === view.length - 1;
+  $('pos').textContent = `${idx + 1} / ${view.length}`;
+  $('tid').textContent = t.task_id;
+  $('badge').textContent = op?.label ?? t.operation;
+  $('prompt').textContent = t.prompt;
+  $('raw').textContent = JSON.stringify(t.answer, null, 2);
+  try {
+    $('detail').innerHTML = op.detail(t.answer, t, N);
+    const s = op.scene(t.answer, t);
+    const used = draw(s, N);
+    $('legend').innerHTML = LEGEND_ORDER.filter(r => used.has(r)).map(r => `<div><i class="${r}"></i>${esc(N[r])}</div>`).join('');
+    drawPaths(s.paths ?? [], drawn);
+  } catch (e) {
+    console.error(t.task_id, e);
+    $('detail').innerHTML = `<span class="bad">Cannot render ${esc(t.task_id)}: ${esc(e.message)}</span>`;
+  }
+}
+
+function setTasks(data, name) {
+  if (!Array.isArray(data) || !data.every(t => t.task_id && t.operation && t.answer)) throw new Error('not a task list');
+  tasks = data;
+  $('msg').style.display = 'none';
+  $('src').textContent = `${name} | ${tasks.length} tasks`;
+  const ops = [...new Set(tasks.map(t => t.operation))];
+  $('op').innerHTML = `<option value="">All operations</option>` +
+    ops.map(o => `<option value="${esc(o)}">${esc(OPERATIONS[o]?.label ?? o)} (${tasks.filter(t => t.operation === o).length})</option>`).join('');
+  applyFilter();
+}
+
+function applyFilter() {
+  view = tasks.filter(t => !$('op').value || t.operation === $('op').value);
+  show(0);
+}
+
+function fail(name, why) {
+  $('msgbody').innerHTML = `<p><b>Could not load ${esc(name)}</b> (${esc(why)}).</p>` +
+    `<p>Browsers block fetching sibling files from file://. Start the local server from the repo root:</p><pre>make viewer</pre>` +
+    `<p>or use <b>Open...</b> to pick a task file.</p>`;
+  $('msg').style.display = 'grid';
+}
+
+async function loadFile(name) {
+  try {
+    const r = await fetch(name);
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    setTasks(await r.json(), name);
+  } catch (e) { fail(name, e.message); }
+}
+
+// ---- wiring ----
+$('prev').onclick = () => idx > 0 && show(idx - 1);
+$('next').onclick = () => idx < view.length - 1 && show(idx + 1);
+$('file').onchange = e => { e.target.blur(); loadFile(e.target.value); };
+$('op').onchange = e => { e.target.blur(); applyFilter(); };
+$('copy').innerHTML = ICON_COPY;
+$('copy').onclick = async () => {
+  const raw = $('raw');
+  try {
+    await navigator.clipboard.writeText(raw.textContent);
+  } catch {
+    getSelection().selectAllChildren(raw);
+    return;
+  }
+  $('copy').innerHTML = ICON_DONE;
+  $('copy').setAttribute('aria-label', 'Copied');
+  setTimeout(() => { $('copy').innerHTML = ICON_COPY; $('copy').setAttribute('aria-label', 'Copy'); }, 1500);
+};
+$('open').onclick = () => $('picker').click();
+$('picker').onchange = async e => {
+  const f = e.target.files[0];
+  if (!f) return;
+  try { setTasks(JSON.parse(await f.text()), f.name); } catch (err) { fail(f.name, err.message); }
+  $('file').selectedIndex = [...$('file').options].findIndex(o => o.value === f.name);
+  e.target.value = '';
+};
+$('panel').onclick = e => {
+  const li = e.target.closest('[data-key]'), mk = li && markers.get(li.dataset.key);
+  if (mk) { map.panTo(mk.getLatLng()); mk.openPopup(); }
+};
+document.addEventListener('keydown', e => {
+  if (['SELECT', 'INPUT'].includes(e.target.tagName)) return;
+  if (e.key === 'ArrowLeft') $('prev').click();
+  if (e.key === 'ArrowRight') $('next').click();
+});
+
+map.setView([40.4259, -86.9081], 14);
+loadFile($('file').value);
+</script>
+</body>
+</html>

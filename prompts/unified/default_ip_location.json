@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "continent": "North America",
+  "continentCode": "NA",
+  "country": "United States",
+  "countryCode": "US",
+  "region": "IN",
+  "regionName": "Indiana",
+  "city": "West Lafayette",
+  "district": "",
+  "zip": "47906",
+  "lat": 40.4444,
+  "lon": -86.9256,
+  "timezone": "America/Indiana/Indianapolis",
+  "offset": -14400,
+  "currency": "USD"
+}

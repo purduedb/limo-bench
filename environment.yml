@@ -1,0 +1,29 @@
+# Create env:
+#     $ conda env create -f environment.yml
+#
+# Regenerate (then re-sort by hand):
+#     $ conda env export -n benchmark --no-builds --from-history | grep -v "^prefix: "
+name: benchmark
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  # LLM + MCP clients
+  - openai
+  - litellm
+  - mcp<2
+  # OSM data + DB
+  - pyosmium
+  - osmium-tool
+  - psycopg
+  # Spatial services
+  - osm2pgsql
+  - nodejs
+  - openjdk=21
+  # Utilities
+  - requests
+  - pyyaml
+  - python-dotenv
+  - tqdm
+  # Tests
+  - pytest

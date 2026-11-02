@@ -1,0 +1,382 @@
+[
+  {
+    "task_id": "WL-FWD-000",
+    "operation": "geocode",
+    "prompt": "I need the lat/long for Triple XXX Family Restaurant at 2 North Salisbury Street, West Lafayette, IN 47906.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 116427250,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Triple XXX Family Restaurant, West Lafayette, IN",
+        "address": "2 North Salisbury Street, West Lafayette, IN 47906",
+        "category": "place",
+        "lat": 40.422723,
+        "lon": -86.9054328
+      }
+    }
+  },
+  {
+    "task_id": "WL-FWD-001",
+    "operation": "geocode",
+    "prompt": "Give me the GPS coordinates of The Moosehead Lounge at 434 North Grant Street, West Lafayette, IN 47906.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 910910470,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "The Moosehead Lounge, West Lafayette, IN",
+        "address": "434 North Grant Street, West Lafayette, IN 47906",
+        "category": "place",
+        "lat": 40.4287698,
+        "lon": -86.9100652
+      }
+    }
+  },
+  {
+    "task_id": "WL-FWD-002",
+    "operation": "geocode",
+    "prompt": "Give me the GPS coordinates of O'Bryan's Nine Irish Brothers at 119 Howard Avenue, West Lafayette, IN 47906.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 116427243,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "O'Bryan's Nine Irish Brothers, West Lafayette, IN",
+        "address": "119 Howard Avenue, West Lafayette, IN 47906",
+        "category": "place",
+        "lat": 40.4229419,
+        "lon": -86.9032583
+      }
+    }
+  },
+  {
+    "task_id": "WL-FWD-003",
+    "operation": "geocode",
+    "prompt": "I need the lat/long for Purdue Student Farm at 1491 Cherry Lane, West Lafayette, IN 47907.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 1287777103,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Purdue Student Farm, West Lafayette, IN",
+        "address": "1491 Cherry Lane, West Lafayette, IN 47907",
+        "category": "place",
+        "lat": 40.4407686,
+        "lon": -86.9346407
+      }
+    }
+  },
+  {
+    "task_id": "WL-FWD-004",
+    "operation": "geocode",
+    "prompt": "Give me the GPS coordinates of Chapel of the Good Shepherd at 610 Meridian Street, West Lafayette, IN 47906.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 869993661,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Chapel of the Good Shepherd, West Lafayette, IN",
+        "address": "610 Meridian Street, West Lafayette, IN 47906",
+        "category": "place",
+        "lat": 40.4344212,
+        "lon": -86.9134219
+      }
+    }
+  },
+  {
+    "task_id": "WL-FWD-005",
+    "operation": "geocode",
+    "prompt": "I need the lat/long for Simulia Corporation at 1440 Innovation Place, West Lafayette, IN 47906.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 585972874,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Simulia Corporation, West Lafayette, IN",
+        "address": "1440 Innovation Place, West Lafayette, IN 47906",
+        "category": "place",
+        "lat": 40.4630131,
+        "lon": -86.9332039
+      }
+    }
+  },
+  {
+    "task_id": "WL-FWD-006",
+    "operation": "geocode",
+    "prompt": "Can you give me the coordinates for Hicks Undergraduate Library at 504 West State Street, West Lafayette, IN 47907?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 158307900,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Hicks Undergraduate Library, West Lafayette, IN",
+        "address": "504 West State Street, West Lafayette, IN 47907",
+        "category": "place",
+        "lat": 40.4245365,
+        "lon": -86.9126571
+      }
+    }
+  },
+  {
+    "task_id": "WL-FWD-007",
+    "operation": "geocode",
+    "prompt": "Find the coordinates of Riverside Covenannt Church at 1850 Woodland Avenue, West Lafayette, IN 47906.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 860918859,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Riverside Covenannt Church, West Lafayette, IN",
+        "address": "1850 Woodland Avenue, West Lafayette, IN 47906",
+        "category": "place",
+        "lat": 40.4454785,
+        "lon": -86.9153591
+      }
+    }
+  },
+  {
+    "task_id": "WL-FWD-008",
+    "operation": "geocode",
+    "prompt": "Give me the GPS coordinates of West Lafayette Fire Station 2 at 531 West Navajo Street, West Lafayette, IN 47906.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 687884685,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "West Lafayette Fire Station 2, West Lafayette, IN",
+        "address": "531 West Navajo Street, West Lafayette, IN 47906",
+        "category": "place",
+        "lat": 40.4515196,
+        "lon": -86.9153091
+      }
+    }
+  },
+  {
+    "task_id": "WL-FWD-009",
+    "operation": "geocode",
+    "prompt": "Find the coordinates of Wabash Valley Education Center at 3061 Benton Street, West Lafayette, IN 47906.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 859101271,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Wabash Valley Education Center, West Lafayette, IN",
+        "address": "3061 Benton Street, West Lafayette, IN 47906",
+        "category": "place",
+        "lat": 40.4622825,
+        "lon": -86.9064707
+      }
+    }
+  },
+  {
+    "task_id": "WL-REV-000",
+    "operation": "geocode_reverse",
+    "prompt": "Identify what is found at latitude 40.422723, longitude -86.9054328.",
+    "target_lat": 40.422723,
+    "target_lon": -86.9054328,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 116427250,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Triple XXX Family Restaurant, West Lafayette, IN",
+        "address": "2 North Salisbury Street, West Lafayette, IN 47906",
+        "category": "place",
+        "lat": 40.422723,
+        "lon": -86.9054328
+      }
+    }
+  },
+  {
+    "task_id": "WL-REV-001",
+    "operation": "geocode_reverse",
+    "prompt": "Given lon=-86.9100652 and lat=40.4287698, what is at this location?",
+    "target_lat": 40.4287698,
+    "target_lon": -86.9100652,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 910910470,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "The Moosehead Lounge, West Lafayette, IN",
+        "address": "434 North Grant Street, West Lafayette, IN 47906",
+        "category": "place",
+        "lat": 40.4287698,
+        "lon": -86.9100652
+      }
+    }
+  },
+  {
+    "task_id": "WL-REV-002",
+    "operation": "geocode_reverse",
+    "prompt": "What place or address corresponds to lon=-86.9032583, lat=40.4229419?",
+    "target_lat": 40.4229419,
+    "target_lon": -86.9032583,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 116427243,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "O'Bryan's Nine Irish Brothers, West Lafayette, IN",
+        "address": "119 Howard Avenue, West Lafayette, IN 47906",
+        "category": "place",
+        "lat": 40.4229419,
+        "lon": -86.9032583
+      }
+    }
+  },
+  {
+    "task_id": "WL-REV-003",
+    "operation": "geocode_reverse",
+    "prompt": "What place or address corresponds to lon=-86.9346407, lat=40.4407686?",
+    "target_lat": 40.4407686,
+    "target_lon": -86.9346407,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 1287777103,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Purdue Student Farm, West Lafayette, IN",
+        "address": "1491 Cherry Lane, West Lafayette, IN 47907",
+        "category": "place",
+        "lat": 40.4407686,
+        "lon": -86.9346407
+      }
+    }
+  },
+  {
+    "task_id": "WL-REV-004",
+    "operation": "geocode_reverse",
+    "prompt": "What's at coordinates (long: -86.9134219, lat: 40.4344212)?",
+    "target_lat": 40.4344212,
+    "target_lon": -86.9134219,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 869993661,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Chapel of the Good Shepherd, West Lafayette, IN",
+        "address": "610 Meridian Street, West Lafayette, IN 47906",
+        "category": "place",
+        "lat": 40.4344212,
+        "lon": -86.9134219
+      }
+    }
+  },
+  {
+    "task_id": "WL-REV-005",
+    "operation": "geocode_reverse",
+    "prompt": "Given long=-86.9332039 and lat=40.4630131, what is at this location?",
+    "target_lat": 40.4630131,
+    "target_lon": -86.9332039,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 585972874,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Simulia Corporation, West Lafayette, IN",
+        "address": "1440 Innovation Place, West Lafayette, IN 47906",
+        "category": "place",
+        "lat": 40.4630131,
+        "lon": -86.9332039
+      }
+    }
+  },
+  {
+    "task_id": "WL-REV-006",
+    "operation": "geocode_reverse",
+    "prompt": "What place or address corresponds to latitude=40.4245365 and longitude=-86.9126571?",
+    "target_lat": 40.4245365,
+    "target_lon": -86.9126571,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 158307900,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Hicks Undergraduate Library, West Lafayette, IN",
+        "address": "504 West State Street, West Lafayette, IN 47907",
+        "category": "place",
+        "lat": 40.4245365,
+        "lon": -86.9126571
+      }
+    }
+  },
+  {
+    "task_id": "WL-REV-007",
+    "operation": "geocode_reverse",
+    "prompt": "What place or address corresponds to lon=-86.9153591, lat=40.4454785?",
+    "target_lat": 40.4454785,
+    "target_lon": -86.9153591,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 860918859,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Riverside Covenannt Church, West Lafayette, IN",
+        "address": "1850 Woodland Avenue, West Lafayette, IN 47906",
+        "category": "place",
+        "lat": 40.4454785,
+        "lon": -86.9153591
+      }
+    }
+  },
+  {
+    "task_id": "WL-REV-008",
+    "operation": "geocode_reverse",
+    "prompt": "Given lon=-86.9153091 and lat=40.4515196, what is at this location?",
+    "target_lat": 40.4515196,
+    "target_lon": -86.9153091,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 687884685,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "West Lafayette Fire Station 2, West Lafayette, IN",
+        "address": "531 West Navajo Street, West Lafayette, IN 47906",
+        "category": "place",
+        "lat": 40.4515196,
+        "lon": -86.9153091
+      }
+    }
+  },
+  {
+    "task_id": "WL-REV-009",
+    "operation": "geocode_reverse",
+    "prompt": "Tell me what's at lon=-86.9064707, lat=40.4622825.",
+    "target_lat": 40.4622825,
+    "target_lon": -86.9064707,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 859101271,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Wabash Valley Education Center, West Lafayette, IN",
+        "address": "3061 Benton Street, West Lafayette, IN 47906",
+        "category": "place",
+        "lat": 40.4622825,
+        "lon": -86.9064707
+      }
+    }
+  }
+]

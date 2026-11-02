@@ -1,0 +1,426 @@
+[
+  {
+    "task_id": "WL-SEM-001",
+    "operation": "geocode",
+    "prompt": "Where do the Boilermakers play their home football games? I'd like coordinates I can drop a pin on.",
+    "points": [],
+    "sql": "",
+    "complexity": "L1S1",
+    "difficulty": "easy",
+    "semantic": {
+      "where the Boilermakers play home football": "anchor: description -> Ross-Ade Stadium W614516704 (Photon returns nothing; the Performance Complex W128488700 is a practice facility)"
+    },
+    "answer": {
+      "location": {
+        "osm_id": 614516704,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Ross-Ade Stadium",
+        "address": "",
+        "lat": 40.43456795,
+        "lon": -86.91849477542465
+      }
+    }
+  },
+  {
+    "task_id": "WL-SEM-002",
+    "operation": "geocode",
+    "prompt": "What are the coordinates of the froyo place at the corner of State and Northwestern?",
+    "points": [],
+    "sql": "",
+    "complexity": "L1S1",
+    "difficulty": "easy",
+    "semantic": {
+      "froyo place at the corner of State and Northwestern": "anchor: function + corner -> Orange Leaf Frozen Yogurt N3554646169 (11 m from West State Street, 39 m from Northwestern Avenue; the only other froyo shop, Red Mango, is 146 m away; Photon returns nothing)"
+    },
+    "answer": {
+      "location": {
+        "osm_id": 3554646169,
+        "source_table": "osm.planet_osm_point",
+        "name": "Orange Leaf Frozen Yogurt",
+        "address": "",
+        "lat": 40.4240567,
+        "lon": -86.9084826
+      }
+    }
+  },
+  {
+    "task_id": "WL-SEM-003",
+    "operation": "geocode_reverse",
+    "prompt": "My friend's phone only shows \"86.91365, 40.43011\" and she's somewhere in West Lafayette. Which building is she at?",
+    "target_lat": 40.43011,
+    "target_lon": -86.91365,
+    "points": [],
+    "sql": "",
+    "complexity": "L1S1",
+    "difficulty": "medium",
+    "semantic": {
+      "\"86.91365, 40.43011\"": "coordinate form: unsigned and swapped pair that must be decoded; only lat 40.43011, lon -86.91365 lands in West Lafayette -> Physics Building (PHYS) W74340895 (counted as one S by user ruling)"
+    },
+    "answer": {
+      "location": {
+        "osm_id": 74340895,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Physics Building (PHYS)",
+        "address": "",
+        "lat": 40.43010595,
+        "lon": -86.91365114526474
+      }
+    }
+  },
+  {
+    "task_id": "WL-SEM-004",
+    "operation": "geocode_reverse",
+    "prompt": "My friend texted me just \"86.899672, 40.423315\" from West Lafayette and said she's getting inked. Which shop is she at?",
+    "target_lat": 40.423315,
+    "target_lon": -86.899672,
+    "points": [],
+    "sql": "",
+    "complexity": "L1S1",
+    "difficulty": "hard",
+    "semantic": {
+      "\"86.899672, 40.423315\"": "input form (not counted in S): unsigned and swapped pair; only lat 40.423315, lon -86.899672 lands in West Lafayette",
+      "getting inked": "category: shop=tattoo; picks 7 Sins Tattoo over Hodson's Bay (12 m), Taste (17 m), 7 Sins Vapor & More (21 m)"
+    },
+    "answer": {
+      "location": {
+        "osm_id": 9350056426,
+        "source_table": "osm.planet_osm_point",
+        "name": "7 Sins Tattoo",
+        "address": "",
+        "lat": 40.4233146,
+        "lon": -86.8996716
+      }
+    }
+  },
+  {
+    "task_id": "WL-SEM-005",
+    "operation": "directionality",
+    "prompt": "Standing at B-Dubs, in which compass direction is Purdue's basketball arena?",
+    "points": [],
+    "sql": "",
+    "complexity": "L3S2",
+    "difficulty": "medium",
+    "semantic": {
+      "B-Dubs": "anchor: colloquial chain nickname -> Buffalo Wild Wings N10713410710 (the only West Lafayette branch; Photon 'B-Dubs' returns nothing)",
+      "Purdue's basketball arena": "anchor: function description -> Mackey Arena W74144839"
+    },
+    "answer": {
+      "direction": "NW",
+      "bearing_deg": 309.37,
+      "distance_km": 1.754,
+      "location_a": {
+        "osm_id": 74144839,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Mackey Arena",
+        "address": "",
+        "lat": 40.43333495,
+        "lon": -86.9161711527253
+      },
+      "location_b": {
+        "osm_id": 10713410710,
+        "source_table": "osm.planet_osm_point",
+        "name": "Buffalo Wild Wings",
+        "address": "",
+        "lat": 40.4233317,
+        "lon": -86.9001534
+      }
+    }
+  },
+  {
+    "task_id": "WL-SEM-006",
+    "operation": "directionality",
+    "prompt": "I'm at the Starbucks next to Chipotle in West Lafayette. In which compass direction is the CS building at Purdue?",
+    "points": [],
+    "sql": "",
+    "complexity": "L4S2",
+    "difficulty": "hard",
+    "semantic": {
+      "Starbucks next to Chipotle": "anchor: adjacency -> Starbucks W283453650 (Chipotle W858326727 is 83 m away; next Starbucks to that Chipotle 2.6 km)",
+      "the CS building": "anchor: description -> Lawson Hall W159752222 (alt. DSAI W117146492, same direction; Photon 'CS building Purdue' returns the Village Administration Building)",
+      "Chipotle": "not counted: lexical name; resolved as a nested landmark, so it counts in L"
+    },
+    "answer": {
+      "direction": "S",
+      "bearing_deg": 182.89,
+      "distance_km": 2.802,
+      "location_a": {
+        "osm_id": 159752222,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Lawson Hall (LWSN)",
+        "address": "",
+        "lat": 40.42777585,
+        "lon": -86.91698799389519
+      },
+      "location_b": {
+        "osm_id": 283453650,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Starbucks",
+        "address": "",
+        "lat": 40.4529185,
+        "lon": -86.91531770542886
+      }
+    }
+  },
+  {
+    "task_id": "WL-SEM-007",
+    "operation": "route",
+    "prompt": "How far is the walk from the Starbucks inside PMU to the nearest place to catch a movie?",
+    "points": [],
+    "sql": "",
+    "complexity": "L4S3",
+    "difficulty": "medium",
+    "semantic": {
+      "Starbucks inside PMU": "anchor: containment -> Starbucks N6035932734",
+      "PMU": "anchor: campus nickname for the Purdue Student Union W117146490 (Photon returns nothing); nested, so counted separately",
+      "catch a movie": "category: amenity=cinema; nearest is Wabash Landing 9 (943 m vs 5066 m)"
+    },
+    "composed": true,
+    "answer": {
+      "location_a": {
+        "osm_id": 6035932734,
+        "source_table": "osm.planet_osm_point",
+        "name": "Starbucks",
+        "address": "",
+        "lat": 40.4250047,
+        "lon": -86.9115419
+      },
+      "location_b": {
+        "osm_id": 460477925,
+        "source_table": "osm.planet_osm_point",
+        "name": "Wabash Landing 9",
+        "address": "",
+        "lat": 40.4217867,
+        "lon": -86.9012617
+      },
+      "mode": "foot",
+      "profile": "foot",
+      "distance_type": "network",
+      "distance_m": 1101.04,
+      "time_min": 13.23
+    }
+  },
+  {
+    "task_id": "WL-SEM-008",
+    "operation": "route",
+    "prompt": "By bike, how far is it from the barbershop next to Fresh Thyme to the hotel inside PMU?",
+    "points": [],
+    "sql": "",
+    "complexity": "L5S3",
+    "difficulty": "hard",
+    "semantic": {
+      "barbershop next to Fresh Thyme": "anchor: adjacency -> Lanie's Barber Shop N10145452884",
+      "hotel inside PMU": "anchor: containment -> Union Club Hotel N12507479707",
+      "PMU": "anchor: campus nickname for the Purdue Student Union W117146490; nested, so counted separately"
+    },
+    "answer": {
+      "location_a": {
+        "osm_id": 10145452884,
+        "source_table": "osm.planet_osm_point",
+        "name": "Lanie's Barber Shop",
+        "address": "",
+        "lat": 40.4523303,
+        "lon": -86.9133882
+      },
+      "location_b": {
+        "osm_id": 12507479707,
+        "source_table": "osm.planet_osm_point",
+        "name": "Union Club Hotel",
+        "address": "",
+        "lat": 40.424997,
+        "lon": -86.910687
+      },
+      "mode": "bike",
+      "profile": "bike",
+      "distance_type": "network",
+      "distance_m": 3455.08,
+      "time_min": 11.95
+    }
+  },
+  {
+    "task_id": "WL-SEM-009",
+    "operation": "range_query",
+    "prompt": "Is there anywhere to catch a movie within a short bike ride of the vet school at Purdue?",
+    "points": [],
+    "sql": "",
+    "complexity": "L2S3",
+    "difficulty": "medium",
+    "semantic": {
+      "vet school at Purdue": "anchor: description -> Lynn Hall W-12710221 (any of the 7 vet buildings gives the same result)",
+      "catch a movie": "category: amenity=cinema",
+      "short bike ride": "proximity: radius up to about 3 km (Wabash Landing 9 at 0.9-1.3 km, next cinema 5.2 km)"
+    },
+    "answer": {
+      "scoring": "precision",
+      "shape": "circle",
+      "include": {
+        "amenity": "cinema"
+      },
+      "reference_points": [
+        {
+          "osm_id": -12710221,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Charles J. Lynn Hall of Veterinary Medicine",
+          "address": "",
+          "lat": 40.419499,
+          "lon": -86.91463630311266
+        }
+      ],
+      "radius_m": 3000.0,
+      "locations": [
+        {
+          "osm_id": 460477925,
+          "source_table": "osm.planet_osm_point",
+          "name": "Wabash Landing 9",
+          "address": "",
+          "lat": 40.4217867,
+          "lon": -86.9012617
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-SEM-010",
+    "operation": "range_query",
+    "prompt": "I'm at the barbershop next to Fresh Thyme in West Lafayette. Is there anywhere nearby to ship a package?",
+    "points": [],
+    "sql": "",
+    "complexity": "L3S3",
+    "difficulty": "hard",
+    "semantic": {
+      "barbershop next to Fresh Thyme": "anchor: adjacency -> Lanie's Barber Shop N10145452884",
+      "ship a package": "category: amenity=post_office",
+      "nearby": "proximity: 0.4-2 km (post office 310 m, next The UPS Store 3.0 km)"
+    },
+    "answer": {
+      "scoring": "precision",
+      "shape": "circle",
+      "include": {
+        "amenity": "post_office"
+      },
+      "reference_points": [
+        {
+          "osm_id": 10145452884,
+          "source_table": "osm.planet_osm_point",
+          "name": "Lanie's Barber Shop",
+          "address": "",
+          "lat": 40.4523303,
+          "lon": -86.9133882
+        }
+      ],
+      "radius_m": 2000.0,
+      "locations": [
+        {
+          "osm_id": 451617116,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "United States Post Office",
+          "address": "",
+          "lat": 40.45218185,
+          "lon": -86.91716483122042
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-SEM-011",
+    "operation": "knn",
+    "prompt": "I'm at the ice cream shop next to the Black Cultural Center. Where's the closest place to fill up my tank?",
+    "points": [],
+    "sql": "",
+    "complexity": "L3S2",
+    "difficulty": "medium",
+    "semantic": {
+      "ice cream shop next to the Black Cultural Center": "anchor: adjacency -> Scoops + Sweets N10228389276",
+      "fill up my tank": "category: amenity=fuel"
+    },
+    "answer": {
+      "k": 1,
+      "distance_type": "euclidean",
+      "include": {
+        "amenity": "fuel"
+      },
+      "mode": null,
+      "profile": null,
+      "reference": {
+        "osm_id": 10228389276,
+        "source_table": "osm.planet_osm_point",
+        "name": "Scoops + Sweets",
+        "address": "",
+        "lat": 40.4270769,
+        "lon": -86.9195642
+      },
+      "locations": [
+        {
+          "osm_id": 345144282,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Circle K",
+          "address": "",
+          "lat": 40.431799,
+          "lon": -86.9139962,
+          "distance_m": 705.8
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "WL-SEM-012",
+    "operation": "knn",
+    "prompt": "Can you find me a couple of places to get a haircut closest to the Co-Rec?",
+    "points": [],
+    "sql": "",
+    "complexity": "L2S2",
+    "difficulty": "easy",
+    "semantic": {
+      "the Co-Rec": "anchor: campus nickname -> France A. Cordova Recreational Sports Center W128488703 (Photon 'CoRec' returns only the adjacent Corec Parking Lot)",
+      "places to get a haircut": "category: shop=hairdresser",
+      "a couple": "not counted: explicit number word, k=2; third nearest (Eclectic Hair Salon, 96 m behind) is a buffer"
+    },
+    "answer": {
+      "scoring": "precision",
+      "k": 2,
+      "distance_type": "euclidean",
+      "include": {
+        "shop": "hairdresser"
+      },
+      "mode": null,
+      "profile": null,
+      "reference": {
+        "osm_id": 128488703,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "France A. Cordova Recreational Sports Center",
+        "address": "",
+        "lat": 40.42841475,
+        "lon": -86.9224454052307
+      },
+      "locations": [
+        {
+          "osm_id": 9525991460,
+          "source_table": "osm.planet_osm_point",
+          "name": "Renu Hair Studio",
+          "address": "",
+          "lat": 40.4315674,
+          "lon": -86.9129473,
+          "distance_m": 878.7
+        },
+        {
+          "osm_id": 116427257,
+          "source_table": "osm.planet_osm_polygon",
+          "name": "Henni's Hair Shop",
+          "address": "",
+          "lat": 40.4246406,
+          "lon": -86.9081781,
+          "distance_m": 1281.2
+        },
+        {
+          "osm_id": 8023920904,
+          "source_table": "osm.planet_osm_point",
+          "name": "Eclectic Hair Salon",
+          "address": "",
+          "lat": 40.4244238,
+          "lon": -86.907076,
+          "distance_m": 1377.5,
+          "accepted": "buffer"
+        }
+      ]
+    }
+  }
+]

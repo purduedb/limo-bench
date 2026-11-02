@@ -1,0 +1,128 @@
+services:
+  nominatim:
+    image: mediagis/nominatim:4.5
+    environment:
+      PBF_PATH: /data/west_lafayette.pbf
+      IMPORT_WIKIPEDIA: "false"
+    volumes:
+      - ${OSM_PBF:-./data/west_lafayette.pbf}:/data/west_lafayette.pbf:ro
+      - nominatim-data:/var/lib/postgresql/16/main
+    ports:
+      - "8080:8080"
+  overpass:
+    image: wiktorn/overpass-api
+    # Fresh volumes inherit mode 0700; the web worker needs socket traversal.
+    command: [sh, -c, "chmod 755 /db && exec /app/docker-entrypoint.sh"]
+    environment:
+      OVERPASS_META: "no"
+      OVERPASS_MODE: init
+      OVERPASS_PLANET_URL: file:///data/west_lafayette.pbf
+      OVERPASS_PLANET_PREPROCESS: "mv /db/planet.osm.bz2 /db/planet.osm.pbf && osmium cat -o /db/planet.osm.bz2 /db/planet.osm.pbf && rm /db/planet.osm.pbf"
+      OVERPASS_STOP_AFTER_INIT: "false"
+    volumes:
+      - ${OSM_PBF:-./data/west_lafayette.pbf}:/data/west_lafayette.pbf:ro
+      - overpass-data:/db
+    ports:
+      - "8081:80"
+  osrm-import:
+    image: ghcr.io/project-osrm/osrm-backend@sha256:55dbfd47d984c2cacd64e32901b4321c86b5ec761438e69aa053dc78698a786f
+    profiles: [init]
+    entrypoint: [sh, /scripts/osrm-import.sh]
+    configs:
+      - source: osrm-import-script
+        target: /scripts/osrm-import.sh
+    volumes:
+      - ${OSM_PBF:-./data/west_lafayette.pbf}:/input/region.osm.pbf:ro
+      - osrm-data:/data
+
+  osrm-car:
+    image: ghcr.io/project-osrm/osrm-backend@sha256:55dbfd47d984c2cacd64e32901b4321c86b5ec761438e69aa053dc78698a786f
+    profiles: [spatial-extra]
+    command: osrm-routed --algorithm mld --threads 2 /data/car/region.osrm
+    volumes: [osrm-data:/data:ro]
+  osrm-bike:
+    image: ghcr.io/project-osrm/osrm-backend@sha256:55dbfd47d984c2cacd64e32901b4321c86b5ec761438e69aa053dc78698a786f
+    profiles: [spatial-extra]
+    command: osrm-routed --algorithm mld --threads 2 /data/bicycle/region.osrm
+    volumes: [osrm-data:/data:ro]
+  osrm-foot:
+    image: ghcr.io/project-osrm/osrm-backend@sha256:55dbfd47d984c2cacd64e32901b4321c86b5ec761438e69aa053dc78698a786f
+    profiles: [spatial-extra]
+    command: osrm-routed --algorithm mld --threads 2 /data/foot/region.osrm
+    volumes: [osrm-data:/data:ro]
+  osrm:
+    image: nginx@sha256:47928bf67eb62a1863cb08d9ecb52d3e704304ba614eaee17884204677702951
+    profiles: [spatial-extra]
+    depends_on: [osrm-car, osrm-bike, osrm-foot]
+    ports: ["127.0.0.1:5000:80"]
+    configs:
+      - source: osrm-proxy
+        target: /etc/nginx/nginx.conf
+
+  tiles-import:
+    image: overv/openstreetmap-tile-server@sha256:b6a79da39b6d0758368f7c62d22e49dd3ec59e78b194a5ef9dee2723b1f3fa79
+    profiles: [init]
+    command: import
+    environment:
+      THREADS: "2"
+      OSM2PGSQL_EXTRA_ARGS: "-C 256"
+    volumes:
+      - ${OSM_PBF:-./data/west_lafayette.pbf}:/data/region.osm.pbf:ro
+      - tiles-data:/data/database
+      - tiles-cache:/data/tiles
+  tiles:
+    image: overv/openstreetmap-tile-server@sha256:b6a79da39b6d0758368f7c62d22e49dd3ec59e78b194a5ef9dee2723b1f3fa79
+    profiles: [spatial-extra]
+    command: run
+    environment:
+      THREADS: "2"
+    shm_size: 256m
+    ports: ["127.0.0.1:8082:80"]
+    volumes:
+      - tiles-data:/data/database
+      - tiles-cache:/data/tiles
+
+volumes:
+  nominatim-data:
+  overpass-data:
+  osrm-data:
+  tiles-data:
+  tiles-cache:
+
+configs:
+  osrm-import-script:
+    content: |
+      #!/bin/sh
+      set -eu
+      fingerprint=$$(sha256sum /input/region.osm.pbf | cut -d ' ' -f 1)
+      for profile in car bicycle foot; do
+        directory=/data/$$profile
+        if [ -f "$$directory/import.sha256" ] && [ "$$(cat "$$directory/import.sha256")" = "$$fingerprint" ]; then
+          echo "OSRM $$profile already imported"
+          continue
+        fi
+        mkdir -p "$$directory"
+        cp /input/region.osm.pbf "$$directory/region.osm.pbf"
+        osrm-extract -t 2 -p "/opt/$$profile.lua" "$$directory/region.osm.pbf"
+        osrm-partition -t 2 "$$directory/region.osrm"
+        osrm-customize -t 2 "$$directory/region.osrm"
+        printf '%s\n' "$$fingerprint" > "$$directory/import.sha256"
+      done
+  osrm-proxy:
+    content: |
+      events {}
+      http {
+        server {
+          listen 80;
+          location ~ ^/(route|nearest|table|match|trip|tile)/v1/(car|driving)/ {
+            proxy_pass http://osrm-car:5000;
+          }
+          location ~ ^/(route|nearest|table|match|trip|tile)/v1/(bike|bicycle|cycling)/ {
+            proxy_pass http://osrm-bike:5000;
+          }
+          location ~ ^/(route|nearest|table|match|trip|tile)/v1/(foot|walk|walking)/ {
+            proxy_pass http://osrm-foot:5000;
+          }
+          location / { return 400 'Unsupported OSRM profile or service\n'; }
+        }
+      }

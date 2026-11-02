@@ -1,0 +1,382 @@
+[
+  {
+    "task_id": "INDY-FWD-000",
+    "operation": "geocode",
+    "prompt": "I need the lat/long for Listen Hear at 2620 Shelby Street, Indianapolis, IN 46203.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 958520838,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Listen Hear, Indianapolis, IN",
+        "address": "2620 Shelby Street, Indianapolis, IN 46203",
+        "category": "place",
+        "lat": 39.729403,
+        "lon": -86.139876
+      }
+    }
+  },
+  {
+    "task_id": "INDY-FWD-001",
+    "operation": "geocode",
+    "prompt": "Give me the GPS coordinates of Mel's Drive In Restaurant at 3045 Mars Hill Street, Indianapolis, IN 46241.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 954706482,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Mel's Drive In Restaurant, Indianapolis, IN",
+        "address": "3045 Mars Hill Street, Indianapolis, IN 46241",
+        "category": "place",
+        "lat": 39.7194585,
+        "lon": -86.228325
+      }
+    }
+  },
+  {
+    "task_id": "INDY-FWD-002",
+    "operation": "geocode",
+    "prompt": "Give me the GPS coordinates of Chick-fil-A at 3360 West 86th Street, Indianapolis, IN 46268.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 225024280,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Chick-fil-A, Indianapolis, IN",
+        "address": "3360 West 86th Street, Indianapolis, IN 46268",
+        "category": "place",
+        "lat": 39.912194,
+        "lon": -86.21897
+      }
+    }
+  },
+  {
+    "task_id": "INDY-FWD-003",
+    "operation": "geocode",
+    "prompt": "I need the lat/long for Panera Bread at 6055 North Keystone Avenue, Indianapolis, IN 46220.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 258010062,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Panera Bread, Indianapolis, IN",
+        "address": "6055 North Keystone Avenue, Indianapolis, IN 46220",
+        "category": "place",
+        "lat": 39.8653418,
+        "lon": -86.1213563
+      }
+    }
+  },
+  {
+    "task_id": "INDY-FWD-004",
+    "operation": "geocode",
+    "prompt": "Give me the GPS coordinates of Dollar General at 5519 West Washington Street, Indianapolis, IN 46241.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 955934978,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Dollar General, Indianapolis, IN",
+        "address": "5519 West Washington Street, Indianapolis, IN 46241",
+        "category": "place",
+        "lat": 39.7509408,
+        "lon": -86.254807
+      }
+    }
+  },
+  {
+    "task_id": "INDY-FWD-005",
+    "operation": "geocode",
+    "prompt": "I need the lat/long for Starbucks at 8130 East Southport Road, Indianapolis, IN 46216.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 1198737432,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Starbucks, Indianapolis, IN",
+        "address": "8130 East Southport Road, Indianapolis, IN 46216",
+        "category": "place",
+        "lat": 39.6686064,
+        "lon": -86.0209577
+      }
+    }
+  },
+  {
+    "task_id": "INDY-FWD-006",
+    "operation": "geocode",
+    "prompt": "Can you give me the coordinates for CVS Pharmacy at 5925 East 71st Street, Indianapolis, IN 46220?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 232574089,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "CVS Pharmacy, Indianapolis, IN",
+        "address": "5925 East 71st Street, Indianapolis, IN 46220",
+        "category": "place",
+        "lat": 39.8828078,
+        "lon": -86.0664962
+      }
+    }
+  },
+  {
+    "task_id": "INDY-FWD-007",
+    "operation": "geocode",
+    "prompt": "Find the coordinates of Rolls-Royce at 450 South Meridian Street, Indianapolis, IN 46225.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 199161248,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Rolls-Royce, Indianapolis, IN",
+        "address": "450 South Meridian Street, Indianapolis, IN 46225",
+        "category": "place",
+        "lat": 39.7606365,
+        "lon": -86.1590744
+      }
+    }
+  },
+  {
+    "task_id": "INDY-FWD-008",
+    "operation": "geocode",
+    "prompt": "Give me the GPS coordinates of Lockerbie Marketplace 333 Building at 333 North Alabama Street, Indianapolis, IN 46204.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": -4817060,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Lockerbie Marketplace 333 Building, Indianapolis, IN",
+        "address": "333 North Alabama Street, Indianapolis, IN 46204",
+        "category": "place",
+        "lat": 39.7721617,
+        "lon": -86.1519833
+      }
+    }
+  },
+  {
+    "task_id": "INDY-FWD-009",
+    "operation": "geocode",
+    "prompt": "Find the coordinates of Hobby Lobby at 10575 East Washington Street, Indianapolis, IN 46229.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 220492826,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Hobby Lobby, Indianapolis, IN",
+        "address": "10575 East Washington Street, Indianapolis, IN 46229",
+        "category": "place",
+        "lat": 39.7731546,
+        "lon": -85.9786925
+      }
+    }
+  },
+  {
+    "task_id": "INDY-REV-000",
+    "operation": "geocode_reverse",
+    "prompt": "Identify what is found at latitude 39.729403, longitude -86.139876.",
+    "target_lat": 39.729403,
+    "target_lon": -86.139876,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 958520838,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Listen Hear, Indianapolis, IN",
+        "address": "2620 Shelby Street, Indianapolis, IN 46203",
+        "category": "place",
+        "lat": 39.729403,
+        "lon": -86.139876
+      }
+    }
+  },
+  {
+    "task_id": "INDY-REV-001",
+    "operation": "geocode_reverse",
+    "prompt": "Given lon=-86.228325 and lat=39.7194585, what is at this location?",
+    "target_lat": 39.7194585,
+    "target_lon": -86.228325,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 954706482,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Mel's Drive In Restaurant, Indianapolis, IN",
+        "address": "3045 Mars Hill Street, Indianapolis, IN 46241",
+        "category": "place",
+        "lat": 39.7194585,
+        "lon": -86.228325
+      }
+    }
+  },
+  {
+    "task_id": "INDY-REV-002",
+    "operation": "geocode_reverse",
+    "prompt": "What place or address corresponds to lon=-86.21897, lat=39.912194?",
+    "target_lat": 39.912194,
+    "target_lon": -86.21897,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 225024280,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Chick-fil-A, Indianapolis, IN",
+        "address": "3360 West 86th Street, Indianapolis, IN 46268",
+        "category": "place",
+        "lat": 39.912194,
+        "lon": -86.21897
+      }
+    }
+  },
+  {
+    "task_id": "INDY-REV-003",
+    "operation": "geocode_reverse",
+    "prompt": "What place or address corresponds to lon=-86.1213563, lat=39.8653418?",
+    "target_lat": 39.8653418,
+    "target_lon": -86.1213563,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 258010062,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Panera Bread, Indianapolis, IN",
+        "address": "6055 North Keystone Avenue, Indianapolis, IN 46220",
+        "category": "place",
+        "lat": 39.8653418,
+        "lon": -86.1213563
+      }
+    }
+  },
+  {
+    "task_id": "INDY-REV-004",
+    "operation": "geocode_reverse",
+    "prompt": "What's at coordinates (long: -86.254807, lat: 39.7509408)?",
+    "target_lat": 39.7509408,
+    "target_lon": -86.254807,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 955934978,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Dollar General, Indianapolis, IN",
+        "address": "5519 West Washington Street, Indianapolis, IN 46241",
+        "category": "place",
+        "lat": 39.7509408,
+        "lon": -86.254807
+      }
+    }
+  },
+  {
+    "task_id": "INDY-REV-005",
+    "operation": "geocode_reverse",
+    "prompt": "Given long=-86.0209577 and lat=39.6686064, what is at this location?",
+    "target_lat": 39.6686064,
+    "target_lon": -86.0209577,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 1198737432,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Starbucks, Indianapolis, IN",
+        "address": "8130 East Southport Road, Indianapolis, IN 46216",
+        "category": "place",
+        "lat": 39.6686064,
+        "lon": -86.0209577
+      }
+    }
+  },
+  {
+    "task_id": "INDY-REV-006",
+    "operation": "geocode_reverse",
+    "prompt": "What place or address corresponds to latitude=39.8828078 and longitude=-86.0664962?",
+    "target_lat": 39.8828078,
+    "target_lon": -86.0664962,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 232574089,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "CVS Pharmacy, Indianapolis, IN",
+        "address": "5925 East 71st Street, Indianapolis, IN 46220",
+        "category": "place",
+        "lat": 39.8828078,
+        "lon": -86.0664962
+      }
+    }
+  },
+  {
+    "task_id": "INDY-REV-007",
+    "operation": "geocode_reverse",
+    "prompt": "What place or address corresponds to lon=-86.1590744, lat=39.7606365?",
+    "target_lat": 39.7606365,
+    "target_lon": -86.1590744,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 199161248,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Rolls-Royce, Indianapolis, IN",
+        "address": "450 South Meridian Street, Indianapolis, IN 46225",
+        "category": "place",
+        "lat": 39.7606365,
+        "lon": -86.1590744
+      }
+    }
+  },
+  {
+    "task_id": "INDY-REV-008",
+    "operation": "geocode_reverse",
+    "prompt": "Given lon=-86.1519833 and lat=39.7721617, what is at this location?",
+    "target_lat": 39.7721617,
+    "target_lon": -86.1519833,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": -4817060,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Lockerbie Marketplace 333 Building, Indianapolis, IN",
+        "address": "333 North Alabama Street, Indianapolis, IN 46204",
+        "category": "place",
+        "lat": 39.7721617,
+        "lon": -86.1519833
+      }
+    }
+  },
+  {
+    "task_id": "INDY-REV-009",
+    "operation": "geocode_reverse",
+    "prompt": "Tell me what's at lon=-85.9786925, lat=39.7731546.",
+    "target_lat": 39.7731546,
+    "target_lon": -85.9786925,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 220492826,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Hobby Lobby, Indianapolis, IN",
+        "address": "10575 East Washington Street, Indianapolis, IN 46229",
+        "category": "place",
+        "lat": 39.7731546,
+        "lon": -85.9786925
+      }
+    }
+  }
+]

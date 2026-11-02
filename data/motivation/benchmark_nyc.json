@@ -1,0 +1,382 @@
+[
+  {
+    "task_id": "NYC-FWD-000",
+    "operation": "geocode",
+    "prompt": "I need the lat/long for Starbucks at 78-27 37th Avenue, Queens, NY 11372.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 2569998659,
+        "source_table": "osm.planet_osm_point",
+        "name": "Starbucks, New York, NY",
+        "address": "78-27 37th Avenue, Queens, NY 11372",
+        "category": "place",
+        "lat": 40.7495446,
+        "lon": -73.8873518
+      }
+    }
+  },
+  {
+    "task_id": "NYC-FWD-001",
+    "operation": "geocode",
+    "prompt": "Give me the GPS coordinates of Chase at 490 Fulton Street, Brooklyn, NY 11201.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 2550005909,
+        "source_table": "osm.planet_osm_point",
+        "name": "Chase, New York, NY",
+        "address": "490 Fulton Street, Brooklyn, NY 11201",
+        "category": "place",
+        "lat": 40.6896547,
+        "lon": -73.9831908
+      }
+    }
+  },
+  {
+    "task_id": "NYC-FWD-002",
+    "operation": "geocode",
+    "prompt": "Give me the GPS coordinates of Kingsbridge Social Club at 3625 Kingsbridge Avenue, Bronx, NY 10463.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 276413925,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Kingsbridge Social Club, New York, NY",
+        "address": "3625 Kingsbridge Avenue, Bronx, NY 10463",
+        "category": "place",
+        "lat": 40.8845795,
+        "lon": -73.9019953
+      }
+    }
+  },
+  {
+    "task_id": "NYC-FWD-003",
+    "operation": "geocode",
+    "prompt": "I need the lat/long for Monica's Pharmacy at 1322 Sheepshead Bay Road, Brooklyn, NY 11235.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 285135135,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Monica's Pharmacy, New York, NY",
+        "address": "1322 Sheepshead Bay Road, Brooklyn, NY 11235",
+        "category": "place",
+        "lat": 40.5876343,
+        "lon": -73.9555552
+      }
+    }
+  },
+  {
+    "task_id": "NYC-FWD-004",
+    "operation": "geocode",
+    "prompt": "Give me the GPS coordinates of Comedy Cellar at 117 MacDougal Street, New York, NY 10012.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 248159880,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Comedy Cellar, New York, NY",
+        "address": "117 MacDougal Street, New York, NY 10012",
+        "category": "place",
+        "lat": 40.730194,
+        "lon": -74.0005647
+      }
+    }
+  },
+  {
+    "task_id": "NYC-FWD-005",
+    "operation": "geocode",
+    "prompt": "I need the lat/long for Billiou-Stillwell-Perine House at 1476 Richmond Road, Staten Island, NY 10304.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 247652478,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Billiou-Stillwell-Perine House, New York, NY",
+        "address": "1476 Richmond Road, Staten Island, NY 10304",
+        "category": "place",
+        "lat": 40.5934276,
+        "lon": -74.1000019
+      }
+    }
+  },
+  {
+    "task_id": "NYC-FWD-006",
+    "operation": "geocode",
+    "prompt": "Can you give me the coordinates for Blue Heron Park Nature Center at 222 Poillon Avenue, Staten Island, NY 10312?",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 248302630,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Blue Heron Park Nature Center, New York, NY",
+        "address": "222 Poillon Avenue, Staten Island, NY 10312",
+        "category": "place",
+        "lat": 40.5308519,
+        "lon": -74.1778097
+      }
+    }
+  },
+  {
+    "task_id": "NYC-FWD-007",
+    "operation": "geocode",
+    "prompt": "Find the coordinates of Queens Public Library at Forest Hills at 108-19 71st Avenue, Forest Hills, NY 11375.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 250564818,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Queens Public Library at Forest Hills, New York, NY",
+        "address": "108-19 71st Avenue, Forest Hills, NY 11375",
+        "category": "place",
+        "lat": 40.7221669,
+        "lon": -73.8430177
+      }
+    }
+  },
+  {
+    "task_id": "NYC-FWD-008",
+    "operation": "geocode",
+    "prompt": "Give me the GPS coordinates of The Riverdale YM-YWHA at 5625 Arlington Avenue, Bronx, NY 10471.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 276544415,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "The Riverdale YM-YWHA, New York, NY",
+        "address": "5625 Arlington Avenue, Bronx, NY 10471",
+        "category": "place",
+        "lat": 40.9049979,
+        "lon": -73.908432
+      }
+    }
+  },
+  {
+    "task_id": "NYC-FWD-009",
+    "operation": "geocode",
+    "prompt": "Find the coordinates of New York Structural Biology Center at 111 Convent Avenue, New York, NY 10027.",
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 271892482,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "New York Structural Biology Center, New York, NY",
+        "address": "111 Convent Avenue, New York, NY 10027",
+        "category": "place",
+        "lat": 40.8161489,
+        "lon": -73.9523851
+      }
+    }
+  },
+  {
+    "task_id": "NYC-REV-000",
+    "operation": "geocode_reverse",
+    "prompt": "Identify what is found at latitude 40.7495446, longitude -73.8873518.",
+    "target_lat": 40.7495446,
+    "target_lon": -73.8873518,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 2569998659,
+        "source_table": "osm.planet_osm_point",
+        "name": "Starbucks, New York, NY",
+        "address": "78-27 37th Avenue, Queens, NY 11372",
+        "category": "place",
+        "lat": 40.7495446,
+        "lon": -73.8873518
+      }
+    }
+  },
+  {
+    "task_id": "NYC-REV-001",
+    "operation": "geocode_reverse",
+    "prompt": "Given lon=-73.9831908 and lat=40.6896547, what is at this location?",
+    "target_lat": 40.6896547,
+    "target_lon": -73.9831908,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 2550005909,
+        "source_table": "osm.planet_osm_point",
+        "name": "Chase, New York, NY",
+        "address": "490 Fulton Street, Brooklyn, NY 11201",
+        "category": "place",
+        "lat": 40.6896547,
+        "lon": -73.9831908
+      }
+    }
+  },
+  {
+    "task_id": "NYC-REV-002",
+    "operation": "geocode_reverse",
+    "prompt": "What place or address corresponds to lon=-73.9019953, lat=40.8845795?",
+    "target_lat": 40.8845795,
+    "target_lon": -73.9019953,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 276413925,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Kingsbridge Social Club, New York, NY",
+        "address": "3625 Kingsbridge Avenue, Bronx, NY 10463",
+        "category": "place",
+        "lat": 40.8845795,
+        "lon": -73.9019953
+      }
+    }
+  },
+  {
+    "task_id": "NYC-REV-003",
+    "operation": "geocode_reverse",
+    "prompt": "What place or address corresponds to lon=-73.9555552, lat=40.5876343?",
+    "target_lat": 40.5876343,
+    "target_lon": -73.9555552,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 285135135,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Monica's Pharmacy, New York, NY",
+        "address": "1322 Sheepshead Bay Road, Brooklyn, NY 11235",
+        "category": "place",
+        "lat": 40.5876343,
+        "lon": -73.9555552
+      }
+    }
+  },
+  {
+    "task_id": "NYC-REV-004",
+    "operation": "geocode_reverse",
+    "prompt": "What's at coordinates (long: -74.0005647, lat: 40.730194)?",
+    "target_lat": 40.730194,
+    "target_lon": -74.0005647,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 248159880,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Comedy Cellar, New York, NY",
+        "address": "117 MacDougal Street, New York, NY 10012",
+        "category": "place",
+        "lat": 40.730194,
+        "lon": -74.0005647
+      }
+    }
+  },
+  {
+    "task_id": "NYC-REV-005",
+    "operation": "geocode_reverse",
+    "prompt": "Given long=-74.1000019 and lat=40.5934276, what is at this location?",
+    "target_lat": 40.5934276,
+    "target_lon": -74.1000019,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 247652478,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Billiou-Stillwell-Perine House, New York, NY",
+        "address": "1476 Richmond Road, Staten Island, NY 10304",
+        "category": "place",
+        "lat": 40.5934276,
+        "lon": -74.1000019
+      }
+    }
+  },
+  {
+    "task_id": "NYC-REV-006",
+    "operation": "geocode_reverse",
+    "prompt": "What place or address corresponds to latitude=40.5308519 and longitude=-74.1778097?",
+    "target_lat": 40.5308519,
+    "target_lon": -74.1778097,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 248302630,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Blue Heron Park Nature Center, New York, NY",
+        "address": "222 Poillon Avenue, Staten Island, NY 10312",
+        "category": "place",
+        "lat": 40.5308519,
+        "lon": -74.1778097
+      }
+    }
+  },
+  {
+    "task_id": "NYC-REV-007",
+    "operation": "geocode_reverse",
+    "prompt": "What place or address corresponds to lon=-73.8430177, lat=40.7221669?",
+    "target_lat": 40.7221669,
+    "target_lon": -73.8430177,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 250564818,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "Queens Public Library at Forest Hills, New York, NY",
+        "address": "108-19 71st Avenue, Forest Hills, NY 11375",
+        "category": "place",
+        "lat": 40.7221669,
+        "lon": -73.8430177
+      }
+    }
+  },
+  {
+    "task_id": "NYC-REV-008",
+    "operation": "geocode_reverse",
+    "prompt": "Given lon=-73.908432 and lat=40.9049979, what is at this location?",
+    "target_lat": 40.9049979,
+    "target_lon": -73.908432,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 276544415,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "The Riverdale YM-YWHA, New York, NY",
+        "address": "5625 Arlington Avenue, Bronx, NY 10471",
+        "category": "place",
+        "lat": 40.9049979,
+        "lon": -73.908432
+      }
+    }
+  },
+  {
+    "task_id": "NYC-REV-009",
+    "operation": "geocode_reverse",
+    "prompt": "Tell me what's at lon=-73.9523851, lat=40.8161489.",
+    "target_lat": 40.8161489,
+    "target_lon": -73.9523851,
+    "points": [],
+    "sql": "",
+    "answer": {
+      "location": {
+        "osm_id": 271892482,
+        "source_table": "osm.planet_osm_polygon",
+        "name": "New York Structural Biology Center, New York, NY",
+        "address": "111 Convent Avenue, New York, NY 10027",
+        "category": "place",
+        "lat": 40.8161489,
+        "lon": -73.9523851
+      }
+    }
+  }
+]

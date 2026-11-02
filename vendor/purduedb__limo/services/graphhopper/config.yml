@@ -1,0 +1,21 @@
+graphhopper:
+  datareader.file: ../../data/west_lafayette.pbf
+  graph.location: ./build/graph-cache
+  graph.encoded_values: car_access, car_average_speed, bike_priority, bike_access, roundabout, bike_average_speed, foot_access, hike_rating, foot_priority, foot_average_speed, bike_road_access, mtb_rating, country, road_class, foot_road_access
+  profiles:
+    - name: car
+      custom_model_files: [car_model.json]
+    - name: bike
+      custom_model_files: [bike_model.json]
+    - name: foot
+      custom_model_files: [foot_model.json]
+  import.osm.ignored_highways: ""
+server:
+  application_connectors:
+    - type: http
+      port: 8989
+      bind_host: 127.0.0.1
+  admin_connectors:
+    - type: http
+      port: 8990
+      bind_host: 127.0.0.1
